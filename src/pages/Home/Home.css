@@ -1,0 +1,38 @@
+.img {
+    min-height: 100vh;
+    width: 100vw;
+    /* object-fit: cover; */
+    background-size: cover;  
+    background-repeat: no-repeat;
+}
+.contact1 {
+        /* position: absolute;
+        top: 132px;
+        left: 54px; */
+        font-size: 75px;
+        font-weight: 700;
+        line-height: 75px;
+        letter-spacing: 2px;
+        min-width: 844px;
+        height: 75px;
+        position: absolute;
+        top: 320px;
+        left: 66px;
+}
+.txt {
+    position: absolute;
+    top: 520px;
+    left: 133px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #fff;
+    max-width: 508px;
+}
+.img1 {
+    width: 614px;
+    height: 120px;
+    top: -300px;
+    position: relative;
+    left: 60px;
+}

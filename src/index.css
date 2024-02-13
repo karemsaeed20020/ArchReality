@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,102 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+@import url("https://fonts.googleapis.com/css2?family=Jomhuria:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@600;700&display=swap");
+body {
+  margin: 0;
+  line-height: normal;
+  }
+:root {
+  /* fonts */
+  --font-josefin-sans: "Josefin Sans";
+  --font-jura: Jura;
+  --font-jomhuria: Jomhuria;
+
+  /* font sizes */
+  --font-size-5xl: 24px;
+  --font-size-xl: 20px;
+
+  /* Colors */
+  --color-darkslategray: #283d4f;
+  --color-antiquewhite: #f8edd9;
+  --color-silver: #c6c6c6;
+  --color-lightgray: #d0d0d0;
+
+  /* Paddings */
+  --padding-base: 16px;
+
+  /* Border radiuses */
+  --br-16xl: 35px;
+  --br-3xs: 10px;
 }
+@import url("https://fonts.googleapis.com/css2?family=Jomhuria:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jomolhari:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;600&display=swap");
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --font-jost: Jost;
+  --font-josefin-sans: "Josefin Sans";
+  --font-jomolhari: Jomolhari;
+  --font-jomhuria: Jomhuria;
+
+  /* font sizes */
+  --font-size-5xl: 24px;
+  --font-size-lgi: 19px;
+  --font-size-lg: 18px;
+  --font-size-13xl: 32px;
+  --font-size-7xl: 26px;
+  --font-size-77xl: 96px;
+  --font-size-29xl: 48px;
+  --font-size-10xl: 29px;
+  --font-size-41xl: 60px;
+  --font-size-17xl: 36px;
+  --font-size-26xl: 45px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-whitesmoke: #f8f9fa;
+  --color-gray-100: rgba(0, 0, 0, 0.85);
+  --color-darkgray: #92989f;
+  --color-darkslategray-100: #283d4f;
+  --color-darkslategray-200: rgba(53, 47, 47, 0.76);
+  --color-antiquewhite-100: #f8edd9;
+  --color-antiquewhite-200: #ded4bf;
+  --color-black: #000;
+
+  /* Gaps */
+  --gap-lg: 18px;
+  --gap-xl: 20px;
+  --gap-106xl: 125px;
+  --gap-12xl: 31px;
+  --gap-43xl: 62px;
+  --gap-64xl: 83px;
+  --gap-22xl: 41px;
+  --gap-8xl: 27px;
+
+  /* Paddings */
+  --padding-12xs: 1px;
+  --padding-61xl: 80px;
+  --padding-85xl: 104px;
+  --padding-33xl: 52px;
+  --padding-xl: 20px;
+  --padding-25xl: 44px;
+  --padding-16xl: 35px;
+  --padding-6xl: 25px;
+  --padding-62xl: 81px;
+  --padding-8xl: 27px;
+  --padding-3xl: 22px;
+  --padding-21xl: 40px;
+
+  /* Border radiuses */
+  --br-mini: 15px;
+  --br-116xl: 135px;
+}
+

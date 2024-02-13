@@ -1,0 +1,225 @@
+img {
+    width: 100vw;
+    height: 354px;
+}
+.wrapper {
+    position: relative;
+    top: -30px;
+}
+.contact {
+    position: absolute;
+    top: 132px;
+    left: 54px;
+    font-size: 70px;
+    font-weight: 600;
+    line-height: 80px;
+    letter-spacing: 2px;
+}
+.shape {
+    width: 105px;
+    height: 177px;
+    background-color: #A8C6EA;
+    border-radius: 35px;
+    position: absolute;
+    top: 505px;
+    left: -67px;
+}
+.speak {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46px;
+    color: #011334;
+}
+.speak1 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
+.frame {
+    width: 18.38px;
+    height: 24px;
+    margin-right: 7px;
+}
+.form {
+    position: relative;
+    /* left: 560px; */
+    /* width: 756px; */
+    width: 660px;
+    /* height: 535px; */
+    height: 500px;
+    /* background-color: #BDBDBD; */
+    border: 1px solid hsl(0, 0%, 74%);
+    padding: 50px;
+    
+    background-color: #F9F9F9;
+    box-shadow: 0px 0px 20px 0px #0000001A;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    position: relative;
+    /* left: 250px; */
+    top: 40px;
+    /* left: 80px; */
+    /* left: 230px; */
+    left: 260px;
+}
+::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #BDBDBD;
+}
+input, textarea {
+    background-color: #F9F9F9;
+    /* margin-top: 10px; */
+    position: relative;
+    top: -25px;
+}
+.btn1 {
+    border-radius: 24px;
+    width: 472px;
+    position: relative;
+    height: 45px;
+   
+}
+
+
+@media screen and (max-width: 768px) {
+    .contact {
+        font-size: 6vw;
+    }
+    
+    .speak {
+        font-size: 4vw;
+    }
+
+    .speak1 {
+        font-size: 2vw;
+    }
+
+    .form {
+        width: 90%;
+        padding: 5vw;
+    }
+
+    .btn1 {
+        height: 15vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact {
+        font-size: 8vw;
+    }
+
+    .speak {
+        font-size: 5vw;
+    }
+
+    .speak1 {
+        font-size: 2.5vw;
+    }
+
+    .form {
+        width: 100%;
+        padding: 8vw;
+    }
+
+    .btn1 {
+        height: 18vw;
+    }
+}
+
+@media (max-width: 775.98px) {
+    .shape {
+      display: none; /* Hide the shape on smaller screens */
+    }
+    input[type="text"] {
+        width: 150px;
+        position: relative;
+        left: 90px;
+        padding: 8px;
+        margin-bottom: 8px;
+    }
+    #lastName {
+        position: relative;
+        left: 40px;
+    }
+    input[type="email"] {
+        width: 312px;
+        position: relative;
+        left: 100px;
+    }
+    #number {
+        width: 312px;
+        position: relative;
+        left: 70px;
+    }
+    #exampleFormControlTextarea1 {
+        width: 55px;
+    }
+    .form {
+        transform: translate(-68%, -1%);
+        
+    }
+    
+  
+    .talk {
+      flex-direction: column-reverse; /* Reverse the order of the columns for smaller screens */
+    }
+  
+    .wrapper {
+      margin-top: 40px; /* Add some space between the text and the form on smaller screens */
+      text-align: center; /* Center-align the text */
+    }
+  
+    .form {
+      width: 90%; /* Make the form width 90% on smaller screens */
+      margin: 0 auto; /* Center the form horizontally */
+    }
+  
+    .btn1 {
+      width: 100%; /* Make the button width 100% to span the entire width of the form */
+      left: auto; /* Remove the left position */
+      top: auto; /* Remove the top position */
+      margin-top: 20px; /* Add some space between the button and the textarea */
+    }
+   
+  }
+  @media (min-width: 575px) and (max-width:725px){
+    .form {
+        transform: translate(-45%, -1%);
+    }
+    .shape {
+        display: none; /* Hide the shape on smaller screens */
+      }
+      input[type="text"] {
+          width: 200px;
+          position: relative;
+          left: 20px;
+          padding: 8px;
+          margin-bottom: 8px;
+      }
+      #lastName {
+          position: relative;
+          left: 40px;
+      }
+      input[type="email"] {
+          width: 490px;
+          position: relative;
+          left: 20px;
+      }
+      #number {
+          width: 490px;
+          position: relative;
+          left: 20px;
+      }
+      #exampleFormControlTextarea1 {
+          width: 55px;
+          position: relative;
+          left: 20px;
+
+        }
+  }

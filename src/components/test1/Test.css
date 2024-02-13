@@ -1,0 +1,245 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.appear {
+    margin-top: 50px;
+    background-color: #283D4F;
+    height: 100vh;
+}
+.user2 {
+    margin-top: 80px;
+    font-weight: bold;
+}
+.frame12 {
+    width: 26.67px;
+    height: 24.47px;
+    /* margin-left: 130px;
+    margin-top: 220px; */
+    
+}
+.ellipse-1135,
+.ellipse-1135 * {
+  box-sizing: border-box;
+}
+.ellipse-1135 {
+  background: #a8c6ea;
+  border-radius: 50%;
+  height: 290.32px;
+  width: 632.96px;
+  position: relative;
+  left: 270px;
+  top: -100px;
+  transform-origin: 0 0;
+  transform: rotate(4.402deg) scale(1, 1);
+  filter: blur(125px);
+}
+.sub {
+    /* width: 170.55px;
+    height: 431.61px;
+    position: relative;
+    top: 229.28px;
+    transform: rotate(-89.85deg); */
+    width: 260.02px;
+    height: 265.44px;
+    position: absolute;
+    top: 120px;
+    left: 170.44px;
+    border-radius: 16px 16px 0px 0px;
+    transform: rotate(-0.05deg);
+    position: absolute;
+  /* height: 100%; */
+  /* width: 100%; */
+
+  right: 0.1px;
+  bottom: 0.3px;
+
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: contain;
+  z-index: 1;
+}
+.prof {
+    width: 214px;
+    height: 214px;
+    margin-top: 90px;
+    margin-left: 80px;
+    
+  
+}
+.info1 {
+    margin-left: 100px;
+    margin-top: 30px;
+}
+.info2 {
+    margin-right: 100px;
+    margin-top: 10px;
+    font-size: 24px;
+    color: #7B6E6E;
+}
+.form11 {
+    margin-top: 80px;
+}
+.control {
+    background-color: #E3E3E3;
+    width: 370px;
+}
+.curve {
+    background-color: #777777;
+    width: 70.55px;
+    height: 431.61px;
+    transform: rotate(-189.85deg);
+    position: relative;
+    top: -350px;
+    left: 100px;
+}
+
+
+  .navbar {
+    position: sticky;
+    top: 0;
+    left: -1px;
+    box-shadow: 0 4px 4px rgba(255, 255, 255, 0.25),
+      5px 5px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: var(--padding-3xs) 83px var(--padding-3xs) var(--padding-21xl);
+    box-sizing: border-box;
+    gap: 20px;
+    z-index: 99;
+    max-width: 100%;
+  }
+  .favorite-frame-child {
+    align-self: stretch;
+    position: relative;
+    height: 959px;
+    display: none;
+  }
+  .user-profile1 {
+    margin: 0;
+    position: relative;
+    font-size: var(--font-size-26xl);
+    font-weight: 700;
+    font-family: var(--font-josefin-sans);
+    color: var(--color-white);
+    text-align: left;
+    z-index: 1;
+  }
+  .user-profile-frame {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 23px 0 var(--padding-xl);
+  }
+ 
+  
+  .email1 {
+    position: relative;
+    left: -50px;
+  }
+  
+    
+@media (min-width: 350px) and (max-width:925px) {
+    .imgs {
+        display: flex;
+        flex-direction: column;
+    }
+    .ellipse-1135 {
+        display: none;
+    }
+    .appear {
+        height: 400px;
+        width: 600px;
+    }
+    .user2 {
+        margin-top: 90px;
+    }
+    .favouriate {
+        margin-top: -90px;
+        margin-left: 50px;
+    }
+    .frame12 {
+        margin-top: 0;
+        margin-left: 90px;
+    }
+    .button {
+        transform: translate(40%, -20%);
+    }
+    .form11 {
+        display: flex;
+    }
+    .last {
+        transform: translate(250%, 50%);
+        padding-bottom: 15px;
+    }
+    .last1 {
+        transform: translate(140%, 50%);
+        padding-bottom: 15px;
+    }
+    .lastName {
+        position: absolute;
+        left: 50px;
+    }
+    .email1 {
+        position: relative;
+        left: 4px;
+    }
+    .lastName1 {
+        position: relative;
+        left: 20;
+    }
+    .sub {
+        display: none;
+    }
+}
+@media (min-width: 792px) and (max-width: 991px) {
+    .email {
+        transform: translate(-120%);
+    }
+    .last1 {
+        transform: translate(110%, 40%);
+    }
+    .last {
+        transform: translate(190%, 30%);
+    }
+    .email1 {
+        position: relative;
+        left: 7px;
+    }
+    .sub {
+        display: none;
+    }
+}
+  
+.appear {
+    position: relative;
+  }
+  
+  .bottom::before {
+    width: 170.02px;
+    height: 255.44px;
+    position: absolute;
+    top: 90px;
+    left: 250.44px;
+    border-radius: 16px 16px 0px 0px;
+    transform: rotate(-0.05deg);
+    position: absolute;
+  /* height: 100%; */
+  /* width: 100%; */
+
+  right: 0.1px;
+  bottom: 0.3px;
+
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: contain;
+  z-index: 1;
+  }
