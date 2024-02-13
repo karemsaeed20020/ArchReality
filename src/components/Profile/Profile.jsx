@@ -796,7 +796,9 @@ const Profile = () => {
   const [cPassword, setCPassword] = useState('');
   const [profileImage, setProfileImage] = useState(null);
   const [passwordError, setPasswordError] = useState('');
-  const {token,userName}=useContext(userContext);
+  const [avatar,setAvatar]=useState(null);
+  const [imgUrl,setImgUrl]=useState("");
+  const {token,userName,setUserName}=useContext(userContext);
   const navigate=useNavigate();
   useEffect(()=>{
     if(!token){
@@ -843,6 +845,7 @@ const Profile = () => {
       formData.append('oldPassword', oldPassword);
       formData.append('password', password);
       formData.append('cPassword', cPassword);
+      formData.append('profile',avatar);
   
       // if (profileImage) {
       //   const uri = profileImage.path;
@@ -870,6 +873,8 @@ const Profile = () => {
           // Example: Check for success message
           if (data.message === 'user has been Updated successfully') {
             alert('Profile Updated Successfully');
+            setImgUrl(data.rest.profilePic.secure_url);
+            setUserName(data.rest.firstName+" "+data.rest.lastName);
             // You can navigate the user to another page or perform other actions
           } else {
             alert('Error updating profile', data.message);
@@ -909,15 +914,20 @@ const Profile = () => {
           </div>
           <div className=" col-lg-9">
             <div className="imgs d-flex align-items-center g-lg-5">
-              <img className="prof" src={Profile1} alt="" style={{boxShadow: "-20px -20px 50px rgba(168, 198, 234, 0.8), 20px 20px 50px rgba(168, 198, 234, 0.8)", backgroundColor: 'transparent', borderRadius: "50%"}} />
+              <img className="prof" src={imgUrl} alt="" style={{boxShadow: "-20px -20px 50px rgba(168, 198, 234, 0.8), 20px 20px 50px rgba(168, 198, 234, 0.8)", backgroundColor: 'transparent', borderRadius: "50%"}} />
               <div className="info1 d-flex flex-column align-items-center ">
                 <span className="name">{userName}</span>
                 <span className="info2">user</span>
               </div>
                 <div className="ellipse-1135"></div>
             </div>
-            <Form className="form11" >
+            <Form className="form11" onSubmit={e=>{
+              e.preventDefault();
+            }}>
+
               <Row >
+                <Form.Control type='file' name="avatar"
+                onChange={(e)=>{setAvatar(e.target.files[0])}}></Form.Control>
                 <Col xs={10}  sm={12} md={6} className="g-md-3 ">
                   <Form.Group>
                     <Form.Label
