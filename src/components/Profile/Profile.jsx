@@ -798,7 +798,8 @@ const Profile = () => {
   const [passwordError, setPasswordError] = useState('');
   const [avatar,setAvatar]=useState(null);
   const [imgUrl,setImgUrl]=useState("");
-  const {token,userName,setUserName}=useContext(userContext);
+  // const {token,userName,setUserName}=useContext(userContext);
+  const {token,fullName, firstNamee, setFirstNamee, lastNamee, setLastNamee}=useContext(userContext);
   const navigate=useNavigate();
   useEffect(()=>{
     if(!token){
@@ -874,7 +875,10 @@ const Profile = () => {
           if (data.message === 'user has been Updated successfully') {
             alert('Profile Updated Successfully');
             setImgUrl(data.rest.profilePic.secure_url);
-            setUserName(data.rest.firstName+" "+data.rest.lastName);
+            // setUserName(data.rest.firstName+" "+data.rest.lastName);
+            setFirstName(data.rest.firstName);
+            setLastNamee(data.lastNamee);
+            
             // You can navigate the user to another page or perform other actions
           } else {
             alert('Error updating profile', data.message);
@@ -916,7 +920,7 @@ const Profile = () => {
             <div className="imgs d-flex align-items-center g-lg-5">
               <img className="prof" src={imgUrl} alt="" style={{boxShadow: "-20px -20px 50px rgba(168, 198, 234, 0.8), 20px 20px 50px rgba(168, 198, 234, 0.8)", backgroundColor: 'transparent', borderRadius: "50%"}} />
               <div className="info1 d-flex flex-column align-items-center ">
-                <span className="name">{userName}</span>
+                <span className="name">{fullName}</span>
                 <span className="info2">user</span>
               </div>
                 <div className="ellipse-1135"></div>
@@ -942,7 +946,7 @@ const Profile = () => {
                     </Form.Label>
                     <Form.Control
                       type="text"
-                      placeholder={userName?.split(" ")[0]}
+                      placeholder={firstNamee?.split(" ")[0]}
                       className="formControl1 "
                       value={firstName}
                       onChange={(e) => setFirstName(e.target.value)}
@@ -971,7 +975,7 @@ const Profile = () => {
                     </Form.Label>
                     <Form.Control
                       type="text"
-                      placeholder={userName?.split(" ")[1]}
+                      placeholder={firstNamee?.split(" ")[1]}
                       className="lastName"
                       value={lastName}
                       onChange={(e) => setLastName(e.target.value)}

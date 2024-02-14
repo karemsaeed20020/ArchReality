@@ -171,7 +171,8 @@ import { useNavigate } from 'react-router-dom';
 import { userContext } from '../../context/UserContext';
 
 const Login = ({match}) => {
-  const {setToken,setUserName}=useContext(userContext);
+  // const {setToken,setUserName}=useContext(userContext);
+  const {setToken,setFirstNamee, setLastNamee, firstNamee, lastNamee}=useContext(userContext);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
@@ -199,7 +200,10 @@ const Login = ({match}) => {
     .then(data => {
         console.log(data);
         setToken(data.userToken);
-        setUserName(data.userName);
+        // setUserName(data.userName);
+        setFirstNamee(data.firstName);
+        setLastNamee(data.lastName);
+
         navigate("/");
     })
     .catch(error => {

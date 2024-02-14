@@ -3,13 +3,24 @@ import { createContext, useEffect, useState } from "react";
 export const userContext=createContext();
 export default function UserProvider({children}){
     const [token,setToken]=useState(null);
-    const [userName,setUserName]=useState(null);
+    // const [userName,setUserName]=useState(null);
+    const [firstNamee, setFirstNamee] = useState(null);
+  const [lastNamee, setLastNamee] = useState(null);
+
+  useEffect(() => console.log(token), [token]);
+
+  const fullName = `${firstNamee} ${lastNamee}`;
     
     useEffect(()=>console.log(token),[token]);
     const values={
         token,
         setToken,
-        userName,setUserName
+        // userName,setUserName
+        firstNamee,
+        setFirstNamee,
+        lastNamee,
+        setLastNamee,
+        fullName,
     }
     return(
         <userContext.Provider value={values}>

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext,  useRef, useState } from "react";
 import "./Test.css";
 import Header from "../Header/Header";
 import { userContext } from "../../context/UserContext";
@@ -10,6 +10,9 @@ import Profile1 from "../../assets/Ellipse 1132.png";
 import Profile2 from "../../assets/Ellipse 1134.png";
 
 const Test = () => {
+  const fileRef = useRef(null);
+  const [file, setFile] = useState(undefined);
+  const [formData, setFormData] = useState("");
   return (
     <>
       <Header />
@@ -39,7 +42,7 @@ const Test = () => {
           </div>
           <div className=" col-lg-9">
             <div className="imgs d-flex align-items-center g-lg-5">
-              <img className="prof" src={Profile1} alt="" style={{boxShadow: "-20px -20px 50px rgba(168, 198, 234, 0.8), 20px 20px 50px rgba(168, 198, 234, 0.8)", backgroundColor: 'transparent', borderRadius: "50%"}} />
+              <img className="prof" onClick={() => fileRef.current.click()} src={formData.picture} alt="" style={{boxShadow: "-20px -20px 50px rgba(168, 198, 234, 0.8), 20px 20px 50px rgba(168, 198, 234, 0.8)", backgroundColor: 'transparent', borderRadius: "50%"}} />
               <div className="info1 d-flex flex-column align-items-center ">
                 <span className="name">Sara Ali</span>
                 <span className="info2">user</span>
@@ -48,6 +51,7 @@ const Test = () => {
             </div>
             <Form className="form11" >
               <Row >
+                <Form.Control type="file" onChange={(e) => setFile(e.target.files[0])} accept="image/*" hidden ref={fileRef} ></Form.Control>
                 <Col xs={10}  sm={12} md={6} className="g-md-3 ">
                   <Form.Group>
                     <Form.Label
