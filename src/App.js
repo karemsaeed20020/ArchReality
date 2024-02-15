@@ -16,6 +16,9 @@ import Favouriate from "./components/Favouriate/Favouriate";
 import Interior from "./components/InteriorDesign/Interior";
 import Exterior from "./components/ExteriorDesign/Exterior";
 import Test from "./components/test1/Test";
+import Info from "./pages/Info/Info";
+import InfoExterior from "./components/InfoExterior/InfoExterior";
+import InfoInterior from "./components/InfoInterior/InfoInterior";
 function App() {
   // const action = useNavigationType();
   // const location = useLocation();
@@ -73,6 +76,9 @@ function App() {
         <Route path="/interior" element={<Interior />} />
         <Route path="/exterior" element={<Exterior />} />
         <Route path="/test" element={<Test />} />
+        <Route path="/info" element={<Info />} />
+        <Route path="/infoExterior" element={<InfoExterior />} />
+        <Route path="/infoInterior" element={<InfoInterior />} />
 
       </Routes>
     </BrowserRouter>

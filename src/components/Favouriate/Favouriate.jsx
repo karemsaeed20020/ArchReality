@@ -196,7 +196,7 @@ const Favouriate = () => {
       <div className="page">
         <div className="details d-flex align-items-center justify-content-between ms-5 mt-2">
           <h3 className="design">Interior Designs</h3>
-          <Link to={"/interior"}>
+          <Link to={"/interior"} style={{textDecoration:  "none"}}>
             <button className="btn2 me-5">
               {/* {showMoreInterior ? 'less' : 'more'} */}
               more
@@ -232,7 +232,7 @@ const Favouriate = () => {
       <div className="page1">
         <div className="details d-flex align-items-center justify-content-between ms-5 mt-1">
           <h3 className="design">Exterior Designs</h3>
-          <Link to={"/exterior"}>
+          <Link to={"/exterior"} style={{textDecoration:  "none"}}>
             <button className="btn2 me-5">
               {/* {showMoreExterior ? 'less' : 'more'} */}
               more
