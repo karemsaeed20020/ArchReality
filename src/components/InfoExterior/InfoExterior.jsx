@@ -37,10 +37,10 @@ const InfoExterior = () => {
                 </Carousel>
                 <div className="">
         <div className="details d-flex align-items-center justify-content-between ms-5 mt-1">
-            <div>
+            <div className='res'>
             <h3 className="design">Exterior Designs</h3>
             <p className='desc'>
-            Celebrating the Artistry of Exterior Design: Where Nature Meets Innovation, and Architectural Marvels Redefine Outdoor Spaces with Timeless Elegance and Contemporary Grandeur
+              Celebrating the Artistry of Exterior Design: Where Nature Meets Innovation, and Architectural Marvels Redefine Outdoor Spaces with Timeless Elegance and Contemporary Grandeur
             </p>
 
             </div>

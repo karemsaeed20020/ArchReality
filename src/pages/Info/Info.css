@@ -319,3 +319,69 @@
       transform: translateY(0);
     }
   }
+
+  @media (max-width: 575.98px){
+    .slider {
+      object-fit: cover;
+    }
+    .carousel-caption {
+      width: 90%; /* Adjust width for smaller screens */
+      font-size: 6vw; /* Adjust font size for smaller screens */
+      object-fit: cover;
+    }
+    .text6 {
+      font-size: 8vw; /* Adjust font size for smaller screens */
+      margin-bottom: 5vw; /* Adjust margin for smaller screens */
+      text-align: center;
+      position: relative;
+      left: 140px;
+      top: 20px
+    }
+    .line6 {
+      font-size: 4.0vw; /* Adjust font size for smaller screens */
+      line-height: 4.5vw; /* Adjust line height for smaller screens */
+      max-width: 500px;
+      position: relative;
+      left: 150px;
+      top: 40px;
+    }
+    .text7 {
+      font-size: 8vw !important;
+      margin-bottom: 5vw; 
+      text-align: center;
+      position: relative;
+      left: 100px;
+      top: -100px;
+      
+    }
+    .line7 {
+      font-size: 4.0vw !important; /* Adjust font size for smaller screens */
+      line-height: 4.5vw !important; /* Adjust line height for smaller screens */
+      max-width: 400px !important;
+      position: relative !important;
+      left: -60px !important;
+      
+    }
+  
+     .text8 {
+      font-size: 8vw; /* Adjust font size for smaller screens */
+      margin-bottom: 5vw; /* Adjust margin for smaller screens */
+      text-align: center;
+      position: relative;
+      left: 120px;
+      top: -150px;
+    }
+    
+     .line8 {
+      font-size: 3.5vw; /* Adjust font size for smaller screens */
+      line-height: 4.5vw; /* Adjust line height for smaller screens */
+      max-width: 300px;
+      position: relative;
+      left: -10px;
+      top: -150px;
+    }
+  
+    .shape1 {
+      display: none;
+    }
+  }
