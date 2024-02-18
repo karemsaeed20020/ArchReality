@@ -385,3 +385,55 @@
       display: none;
     }
   }
+
+  /* Info.css */
+
+/* Styles for iPad */
+@media only screen and (min-device-width: 570px) and (max-device-width: 1024px) {
+  /* Adjust the styles for the slider images */
+  .slider {
+    max-width: 100%; /* Ensure the images are responsive */
+    height: auto; /* Prevent image distortion */
+  }
+  .text6 {
+    font-size: 50px;
+    position: relative;
+    left: 60px;
+  }
+  .line6 {
+    font-size: 20px;
+    position: relative;
+    left: 120px;
+  }
+  .text7 {
+    font-size: 50px !important;
+    position: relative;
+    left: 60px;
+    top: -50px;
+  }
+  .line7 {
+    font-size: 18px !important;
+    position: relative;
+    left: -80px !important;
+  }
+  .text8 {
+    font-size: 80px;
+    position: relative;
+    left: 70px;
+    top: -70px;
+  }
+  .line8 {
+    font-size: 18px !important;
+    position: relative;
+    left: -80px !important;
+  }
+  /* Adjust the styles for the headings */
+  .text6, .text7, .text8 {
+    font-size: 50px; /* Example: Adjust the font size for headings */
+  }
+  /* Adjust the styles for the text lines */
+  .line6, .line7, .line8 {
+    font-size: 18px; /* Example: Adjust the font size for text lines */
+  }
+  /* Add more specific styles as needed */
+}

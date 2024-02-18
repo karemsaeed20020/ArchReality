@@ -197,7 +197,7 @@ const Favouriate = () => {
         <div className="details d-flex align-items-center justify-content-between ms-5 mt-2">
           <h3 className="design">Interior Designs</h3>
           <Link to={"/interior"} style={{textDecoration:  "none"}}>
-            <button className="btn2 me-5">
+            <button className="btn2 me-5" style={{background: "#D8D8D8", color: "#283D4F"}}>
               {/* {showMoreInterior ? 'less' : 'more'} */}
               more
             </button>
@@ -215,6 +215,7 @@ const Favouriate = () => {
                     variant="top"
                     src={detail.image}
                     className="cardImage"
+                    style={{borderRadius: "20px"}}
                   />
                   <Card.Body>
                     <Card.Title className="cardTitle">
@@ -233,7 +234,7 @@ const Favouriate = () => {
         <div className="details d-flex align-items-center justify-content-between ms-5 mt-1">
           <h3 className="design">Exterior Designs</h3>
           <Link to={"/exterior"} style={{textDecoration:  "none"}}>
-            <button className="btn2 me-5">
+            <button className="btn2 me-5" style={{background: "#D8D8D8", color: "#283D4F"}}>
               {/* {showMoreExterior ? 'less' : 'more'} */}
               more
             </button>
@@ -244,7 +245,7 @@ const Favouriate = () => {
           {details1.slice(1, 4).map((detail1, i) => (
             <div className="col-lg-4 col-md-6 mb-4" key={i}>
               <Card style={{ border: "none", background: "transparent" }}>
-                <Card.Img variant="top" src={detail1.image} />
+                <Card.Img variant="top" src={detail1.image} style={{borderRadius: "20px"}} />
                 <Card.Body>
                   <Card.Title className="cardTitle">{detail1.title}</Card.Title>
                   <Card.Text>{detail1.desc}</Card.Text>

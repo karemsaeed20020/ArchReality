@@ -276,3 +276,82 @@ button{
   padding: 16px;
 }
 
+@media (max-width: 576px) {
+  .container {
+    /* padding: 10px; */
+    min-width: 400px;
+    
+  }
+  
+  .login-form {
+    margin-top: 25rem;
+    position: relative;
+    right: 40px;
+    top: 40px;
+    
+  }
+  input {
+    transform: translate(-22%);
+  }
+  
+  .fo.form-control1,
+  .form-control1 {
+    width: calc(100% - 20px);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  input {
+    flex-direction: column;
+    position: relative;
+    left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .login-btn {
+    width: calc(100% - 20px);
+  }
+  .frame-parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 300px;
+  }
+  .log-in-with {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 130px;
+    /* top: 10px; */
+    bottom: 20px;
+    top: 550px;
+    min-width: 200px;
+  }
+  .desktop-20-inner {
+    position: absolute;
+    left: 20px;
+  }
+  .or-wrapper {
+    position: absolute;
+    left: 220px;
+    bottom: 290px;
+  }
+  .vector-icon {
+    position: absolute;
+    left: 265px;
+  }
+  .join-us-by {
+    max-width: 300px;
+  }
+}
+
+/* For larger screens */
+@media (min-width: 992px) {
+  .container {
+    max-width: 600px;
+  }
+}

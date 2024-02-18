@@ -248,3 +248,31 @@
 .indicator-inactive {
   background-color: grey;
 }
+
+@media (min-width: 575.98px) and (max-width: 1075.98px) { 
+  .interior-exterior-toggle-wrapper {
+    /* width: 50px; */
+    position: relative;
+    right: 120px;
+    padding: 10px;
+  }
+  .interior-exterior-toggle {
+    /* position: relative; */
+    margin-top: 20px;
+    padding: 10px; 
+    margin: 10px;
+  }
+  .favouriates {
+    text-align: center;
+    position: relative;
+    left: -45px;
+    
+  }
+  .elegance-redefined-showcasing-wrapper {
+    max-width: 400px;
+    position: relative;
+    right: 65px; 
+  }
+  
+  
+ }

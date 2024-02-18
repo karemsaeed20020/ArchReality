@@ -117,7 +117,7 @@
         <div className="" style={{marginTop: "-50px"}}>
             <div className="details d-flex align-items-center justify-content-between ms-5  mt-2">
             <h3 className="design2">Designs with AR</h3>
-            <Link to={"/interior"} style={{textDecoration:  "none"}}>
+            <Link to={"/interior"} style={{textDecoration:  "none", position: "relative", right: "45px"}}>
                 <button className="btn3 me-3">
                 {/* {showMoreInterior ? 'less' : 'more'} */}
                 more

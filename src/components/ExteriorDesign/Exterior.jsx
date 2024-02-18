@@ -44,7 +44,7 @@ const Exterior = () => {
                         {allDetails.slice(0, showMore ? allDetails.length : 6).map((detail1, i) => (
                             <div className="col-lg-4 col-md-6 mb-3" key={i}>
                                 <Card style={{ border: "none", background: "transparent" }}>
-                                    <Card.Img variant="top" src={detail1.image} className='cardImage' />
+                                    <Card.Img variant="top" src={detail1.image} className='cardImage' style={{borderRadius: "20px"}} />
                                     <Card.Body>
                                         <Card.Title className='cardTitle'>{detail1.title}</Card.Title>
                                         <Card.Text className='cardDetalis'>{detail1.desc}</Card.Text>
