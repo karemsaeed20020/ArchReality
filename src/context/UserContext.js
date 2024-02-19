@@ -6,6 +6,7 @@ export default function UserProvider({children}){
     // const [userName,setUserName]=useState(null);
     const [firstNamee, setFirstNamee] = useState(null);
   const [lastNamee, setLastNamee] = useState(null);
+  const [image, setImage] = useState(null);
 
   useEffect(() => console.log(token), [token]);
 
@@ -21,6 +22,8 @@ export default function UserProvider({children}){
         lastNamee,
         setLastNamee,
         fullName,
+        image,
+        setImage
     }
     return(
         <userContext.Provider value={values}>

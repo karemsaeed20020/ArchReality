@@ -253,3 +253,83 @@ input {
   top: 0px;
   max-width: 100%;
 }
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  .arcreality1 {
+    display: none;
+  }
+  .cerate-new-account {
+    position: relative;
+    left: 10px;
+    min-width: 300px;
+    text-align: left;
+  }
+  .register-item {
+    display: none;
+  }
+  .register-child {
+    display: none;
+  }
+  .cerate-new-account {
+    font-size: 48px;
+    width: auto;
+  }
+  .register-item {
+    width: 100%;
+    height: auto;
+  }
+  .register-inner,
+  .email-wrapper,
+  .first-name-wrapper,
+  .last-name-wrapper,
+  .frame-div {
+    width: 80%;
+    left: 5%;
+    margin-top: 10px;
+    height: 60px;
+    
+  }
+  .password-parent,
+  .confirm-password-parent {
+    gap: 20px;
+  }
+  .frame1-parent {
+    gap: 20px;
+  }
+  .sign1-up-with,
+  .or1 {
+    font-size: 18px;
+  }
+  .or1-wrapper {
+    position: relative;
+    left: 180px;
+    top: 545px;
+  }
+  .vec-child1 {
+    position: relative;
+    left: 0px;
+    right: 20px;
+    top: 585px;
+  }
+  .vector1-icon {
+    position: relative;
+    left: 230px;
+    top: 615px;
+  }
+  .sign1-up-with {
+    position: relative;
+    left: 20px;
+    top: 700px;
+    font-size: 20px;
+  }
+  .frame1-parent {
+    position: relative;
+    left: 140px;
+    top: 810px;
+    bottom: 10px;
+  }
+  
+}
+
+/* For larger screens */

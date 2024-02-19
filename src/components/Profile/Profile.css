@@ -250,6 +250,7 @@
     left: -50px;
   }
   
+  
     
 @media (min-width: 350px) and (max-width:925px) {
     .imgs {
@@ -269,6 +270,9 @@
     .favouriate {
         margin-top: -90px;
         margin-left: 50px;
+        position: absolute;
+        top: -200px;
+        left: -100px;
     }
     .frame12 {
         margin-top: 0;
@@ -299,6 +303,9 @@
     .lastName1 {
         position: relative;
         left: 20;
+    }
+    svg {
+        display: none;
     }
 }
 @media (min-width: 792px) and (max-width: 991px) {

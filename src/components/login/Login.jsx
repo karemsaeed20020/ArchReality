@@ -172,7 +172,7 @@ import { userContext } from '../../context/UserContext';
 
 const Login = ({match}) => {
   // const {setToken,setUserName}=useContext(userContext);
-  const {setToken,setFirstNamee, setLastNamee, firstNamee, lastNamee}=useContext(userContext);
+  const {setToken,setFirstNamee, setLastNamee, firstNamee, lastNamee, setImage, image}=useContext(userContext);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
@@ -203,6 +203,7 @@ const Login = ({match}) => {
         // setUserName(data.userName);
         setFirstNamee(data.firstName);
         setLastNamee(data.lastName);
+        setImage(data.picture)
 
         navigate("/");
     })
