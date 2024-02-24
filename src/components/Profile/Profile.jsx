@@ -1048,7 +1048,7 @@ Created by potrace 1.10, written by Peter Selinger 2001-2011
                     <Form.Control
                       type="email"
                       placeholder="sara_ali77@gmail.com"
-                      className="lastName"
+                      className="lastName3"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       style={{
@@ -1135,7 +1135,7 @@ Created by potrace 1.10, written by Peter Selinger 2001-2011
                     <Form.Control
                       type="password"                    
                       placeholder=""
-                      className="lastName"
+                      className="lastName2"
                       value={cPassword}
                       onChange={(e) => setCPassword(e.target.value)}
                       style={{

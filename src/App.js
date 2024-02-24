@@ -1,15 +1,12 @@
-import { useEffect, useState } from "react";
 import {
   Routes,
   Route,
-  useNavigationType,
-  useLocation,
+  
   BrowserRouter,
 } from "react-router-dom";
 import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import Home from "./pages/Home/Home";
-import Header from "./components/Header/Header";
 import ContactUs from "./components/ContactUs/ContactUs";
 import Profile from "./components/Profile/Profile";
 import Favouriate from "./components/Favouriate/Favouriate";
@@ -20,48 +17,7 @@ import Info from "./pages/Info/Info";
 import InfoExterior from "./components/InfoExterior/InfoExterior";
 import InfoInterior from "./components/InfoInterior/InfoInterior";
 function App() {
-  // const action = useNavigationType();
-  // const location = useLocation();
-  // const pathname = location.pathname;
   
-
-  
-  // useEffect(() => {
-  //   if (action !== "POP") {
-  //     window.scrollTo(0, 0);
-  //   }
-  // }, [action, pathname]);
-
-  // useEffect(() => {
-  //   let title = "";
-  //   let metaDescription = "";
-
-  //   switch (pathname) {
-  //     case "/":
-  //       title = "";
-  //       metaDescription = "";
-  //       break;
-  //   }
-
-  //   if (title) {
-  //     document.title = title;
-  //   }
-
-  //   if (metaDescription) {
-  //     const metaDescriptionTag = document.querySelector(
-  //       'head > meta[name="description"]'
-  //     );
-  //     if (metaDescriptionTag) {
-  //       metaDescriptionTag.content = metaDescription;
-  //     }
-  //   }
-  // }, [pathname]);
-  const details = [
-    { image: 'image1.jpg', title: 'Title 1', desc: 'Description 1' },
-    { image: 'image2.jpg', title: 'Title 2', desc: 'Description 2' },
-    // Add more details as needed
-  ];
-
   return (
     <BrowserRouter>
       <Routes>

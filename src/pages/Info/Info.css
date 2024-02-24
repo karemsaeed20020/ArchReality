@@ -286,8 +286,6 @@
     }
   }
 
-  
-  
   .btn2 {
     border: none;
     background-color: #A8C6EA;
@@ -325,21 +323,21 @@
       object-fit: cover;
     }
     .carousel-caption {
-      width: 90%; /* Adjust width for smaller screens */
-      font-size: 6vw; /* Adjust font size for smaller screens */
+      width: 90%; 
+      font-size: 6vw;
       object-fit: cover;
     }
     .text6 {
-      font-size: 8vw; /* Adjust font size for smaller screens */
-      margin-bottom: 5vw; /* Adjust margin for smaller screens */
+      font-size: 8vw; 
+      margin-bottom: 5vw; 
       text-align: center;
       position: relative;
       left: 140px;
       top: 20px
     }
     .line6 {
-      font-size: 4.0vw; /* Adjust font size for smaller screens */
-      line-height: 4.5vw; /* Adjust line height for smaller screens */
+      font-size: 4.0vw; 
+      line-height: 4.5vw; 
       max-width: 500px;
       position: relative;
       left: 150px;
@@ -355,8 +353,8 @@
       
     }
     .line7 {
-      font-size: 4.0vw !important; /* Adjust font size for smaller screens */
-      line-height: 4.5vw !important; /* Adjust line height for smaller screens */
+      font-size: 4.0vw !important; 
+      line-height: 4.5vw !important; 
       max-width: 400px !important;
       position: relative !important;
       left: -60px !important;
@@ -364,8 +362,8 @@
     }
   
      .text8 {
-      font-size: 8vw; /* Adjust font size for smaller screens */
-      margin-bottom: 5vw; /* Adjust margin for smaller screens */
+      font-size: 8vw; 
+      margin-bottom: 5vw; 
       text-align: center;
       position: relative;
       left: 120px;
@@ -373,8 +371,8 @@
     }
     
      .line8 {
-      font-size: 3.5vw; /* Adjust font size for smaller screens */
-      line-height: 4.5vw; /* Adjust line height for smaller screens */
+      font-size: 3.5vw;
+      line-height: 4.5vw; 
       max-width: 300px;
       position: relative;
       left: -10px;
@@ -388,12 +386,10 @@
 
   /* Info.css */
 
-/* Styles for iPad */
 @media only screen and (min-device-width: 570px) and (max-device-width: 1024px) {
-  /* Adjust the styles for the slider images */
   .slider {
-    max-width: 100%; /* Ensure the images are responsive */
-    height: auto; /* Prevent image distortion */
+    max-width: 100%; 
+    height: auto; 
   }
   .text6 {
     font-size: 50px;
@@ -427,13 +423,10 @@
     position: relative;
     left: -80px !important;
   }
-  /* Adjust the styles for the headings */
   .text6, .text7, .text8 {
-    font-size: 50px; /* Example: Adjust the font size for headings */
+    font-size: 50px; 
   }
-  /* Adjust the styles for the text lines */
   .line6, .line7, .line8 {
-    font-size: 18px; /* Example: Adjust the font size for text lines */
+    font-size: 18px; 
   }
-  /* Add more specific styles as needed */
 }

@@ -1,6 +1,7 @@
 img {
     width: 100vw;
-    height: 354px;
+    /* height: 354px; */
+    height: 400px;
 }
 .wrapper {
     position: relative;
@@ -85,10 +86,9 @@ input, textarea {
    
 }
 
-
 @media screen and (max-width: 768px) {
     .contact {
-        font-size: 6vw;
+        font-size: 8vw;
     }
     
     .speak {
@@ -102,6 +102,7 @@ input, textarea {
     .form {
         width: 90%;
         padding: 5vw;
+        transform: translate(-46%, 1%);
     }
 
     .btn1 {
@@ -109,9 +110,13 @@ input, textarea {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 390px) {
     .contact {
         font-size: 8vw;
+    }
+    .talk {
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     .speak {
@@ -130,70 +135,114 @@ input, textarea {
     .btn1 {
         height: 18vw;
     }
+    .shape {
+        display: none; 
+      }
+      
+      input[type="text"] {
+          width: 150px;
+          position: relative;
+          left: 130px;
+          padding: 8px;
+          margin-bottom: 8px;
+      }
+      #lastName {
+          position: relative;
+          left: 70px;
+      }
+      input[type="email"] {
+          width: 312px;
+          position: relative;
+          left: 170px;
+      }
+      #number {
+          width: 312px;
+          position: relative;
+          left: 140px;
+      }
+      #exampleFormControlTextarea1 {
+          width: 55px;
+      }
+      .form {
+          /* transform: translate(-68%, -1%); */
+          transform: translate(-70%, 1%) !important;
+      }
+      textarea {
+        width: calc(90% - 80px) !important; 
+        position: relative;
+        left: 70px;
+      }
 }
 
-@media (max-width: 775.98px) {
+@media (min-width: 400px) and (max-width: 875.98px) {
     .shape {
-      display: none; /* Hide the shape on smaller screens */
+      display: none; 
     }
+    
     input[type="text"] {
         width: 150px;
         position: relative;
-        left: 90px;
+        left: 130px;
         padding: 8px;
         margin-bottom: 8px;
     }
     #lastName {
         position: relative;
-        left: 40px;
+        left: 70px;
     }
     input[type="email"] {
         width: 312px;
         position: relative;
-        left: 100px;
+        left: 170px;
     }
     #number {
         width: 312px;
         position: relative;
-        left: 70px;
+        left: 140px;
     }
     #exampleFormControlTextarea1 {
         width: 55px;
     }
     .form {
-        transform: translate(-68%, -1%);
-        
+        /* transform: translate(-68%, -1%); */
+        transform: translate(-67%, 1%) !important; 
     }
+    textarea {
+        width: calc(100% - 10px) !important; 
+        position: relative;
+        left: 70px;
+      }
     
   
     .talk {
-      flex-direction: column-reverse; /* Reverse the order of the columns for smaller screens */
+      flex-direction: column-reverse; 
     }
   
     .wrapper {
-      margin-top: 40px; /* Add some space between the text and the form on smaller screens */
-      text-align: center; /* Center-align the text */
+      margin-top: 40px; 
+      text-align: center; 
     }
   
     .form {
-      width: 90%; /* Make the form width 90% on smaller screens */
-      margin: 0 auto; /* Center the form horizontally */
+      width: 90%; 
+      margin: 0 auto;
     }
   
     .btn1 {
-      width: 100%; /* Make the button width 100% to span the entire width of the form */
-      left: auto; /* Remove the left position */
-      top: auto; /* Remove the top position */
-      margin-top: 20px; /* Add some space between the button and the textarea */
+      width: 100%; 
+      left: auto;
+      top: auto; 
+      margin-top: 20px; 
     }
    
   }
-  @media (min-width: 575px) and (max-width:725px){
+  @media (min-width: 575px) and (max-width:925px){
     .form {
-        transform: translate(-45%, -1%);
+        /* transform: translate(-45%, -1%); */
+        transform: translate(-40%, 1%) !important;
     }
     .shape {
-        display: none; /* Hide the shape on smaller screens */
+        display: none; 
       }
       input[type="text"] {
           width: 200px;
@@ -223,3 +272,4 @@ input, textarea {
 
         }
   }
+  

@@ -311,6 +311,7 @@
 @media (min-width: 792px) and (max-width: 991px) {
     .email {
         transform: translate(-120%);
+        
     }
     .last1 {
         transform: translate(10%, 40%);
@@ -322,5 +323,29 @@
         position: relative;
         left: 7px;
     }
+    .form11 {
+        transform: translate(-5%);
+    }
+    .lastName {
+        position: relative !important;
+        left: 60px !important;
+        width: 350px !important;
+    }
+    .last {
+        position: relative;
+        left: -70px !important;
+    }
+    .lastName2 {
+        position: relative;
+        left: 20px;
+    }
+    .lastName3 {
+        width: calc(90% - 5px) !important;
+        position: relative !important;
+        left: 40px !important;
+    }
+    .button {
+        position: relative;
+        left: -70px;
+    }
 }
-  
