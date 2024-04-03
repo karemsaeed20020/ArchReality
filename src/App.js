@@ -16,6 +16,7 @@ import Test from "./components/test1/Test";
 import Info from "./pages/Info/Info";
 import InfoExterior from "./components/InfoExterior/InfoExterior";
 import InfoInterior from "./components/InfoInterior/InfoInterior";
+import ProfileFavouriate from "./components/ProfileFavouriate/ProfileFavouriate";
 function App() {
   
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/info" element={<Info />} />
         <Route path="/infoExterior" element={<InfoExterior />} />
         <Route path="/infoInterior" element={<InfoInterior />} />
+        <Route path="/profileFavouriate" element={<ProfileFavouriate />} />
 
       </Routes>
     </BrowserRouter>

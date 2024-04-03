@@ -15,7 +15,6 @@ const ContactUs = () => {
   const messageRef = useRef(null);
   
   useEffect(() => {
-    // Focus on the first input field when the component mounts
     firstNameRef.current.focus();
   }, []);
   const [firstName, setFirstName] = useState("");
@@ -25,9 +24,8 @@ const ContactUs = () => {
   const [message, setMessage] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can handle form submission logic here
     console.log("Form submitted:", { firstName, lastName, email, phoneNumber, message });
-    // Clear form inputs after submission
+    
     setFirstName("");
     setLastName("");
     setEmail("");
@@ -97,6 +95,7 @@ const ContactUs = () => {
                   class="form-control"
                   placeholder="First name"
                   aria-label="First name"
+                  id="firstName"
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
                 />

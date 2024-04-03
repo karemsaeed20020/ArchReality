@@ -83,6 +83,7 @@ input, textarea {
     width: 472px;
     position: relative;
     height: 45px;
+    transform: translate(-50%, -50%) !important;
    
 }
 
@@ -110,7 +111,7 @@ input, textarea {
     }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 490px) {
     .contact {
         font-size: 8vw;
     }
@@ -142,23 +143,27 @@ input, textarea {
       input[type="text"] {
           width: 150px;
           position: relative;
-          left: 130px;
+          left: 50px;
           padding: 8px;
           margin-bottom: 8px;
       }
+      #firstName {
+        position: relative;
+        top: 25px;
+      }
       #lastName {
           position: relative;
-          left: 70px;
+          left: 220px;
       }
       input[type="email"] {
           width: 312px;
           position: relative;
-          left: 170px;
+          left: 90px;
       }
       #number {
           width: 312px;
           position: relative;
-          left: 140px;
+          left: 60px;
       }
       #exampleFormControlTextarea1 {
           width: 55px;
@@ -170,7 +175,10 @@ input, textarea {
       textarea {
         width: calc(90% - 80px) !important; 
         position: relative;
-        left: 70px;
+        left: -10px;
+      }
+      .btn1 {
+        transform: translate(-60%, -100%) !important;
       }
 }
 
@@ -186,19 +194,23 @@ input, textarea {
         padding: 8px;
         margin-bottom: 8px;
     }
+    #firstName {
+        position: relative;
+        left: 40px;
+    }
     #lastName {
         position: relative;
-        left: 70px;
+        left: 200px;
     }
     input[type="email"] {
         width: 312px;
         position: relative;
-        left: 170px;
+        left: 90px;
     }
     #number {
         width: 312px;
         position: relative;
-        left: 140px;
+        left: 60px;
     }
     #exampleFormControlTextarea1 {
         width: 55px;
@@ -208,9 +220,9 @@ input, textarea {
         transform: translate(-67%, 1%) !important; 
     }
     textarea {
-        width: calc(100% - 10px) !important; 
+        width: calc(75% - 10px) !important; 
         position: relative;
-        left: 70px;
+        left: -10px;
       }
     
   
@@ -272,4 +284,5 @@ input, textarea {
 
         }
   }
+  
   

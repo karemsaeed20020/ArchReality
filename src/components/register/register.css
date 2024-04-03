@@ -330,3 +330,7 @@ input {
   
 }
 
+
+.register {
+  transform: translate(-10%);
+}

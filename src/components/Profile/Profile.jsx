@@ -784,7 +784,17 @@ import Subtract from '../../assets/Subtract.png';
 import Frame from '../../assets/material-symbols_favorite-outline.png';
 import { userContext } from '../../context/UserContext';
 import { Link, useNavigate } from 'react-router-dom';
-import { Col, Form, Row } from 'react-bootstrap';
+import { motion } from "framer-motion";
+import { Col, Form, Row, Spinner } from 'react-bootstrap';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { MdClose } from 'react-icons/md';
+import { updateStart, updateSuccess, updateFailure, updateProfilePage, updateFullName } from '../../redux/user/userSlice';
+import { useDispatch } from 'react-redux';
+
+
+
 
 
 const Profile = () => {
@@ -798,9 +808,11 @@ const Profile = () => {
   const [passwordError, setPasswordError] = useState('');
   const [avatar,setAvatar]=useState(null);
   const [imgUrl,setImgUrl]=useState("");
+  const [loading, setLoading] = useState(false);
   // const {token,userName,setUserName}=useContext(userContext);
   const {token,fullName, firstNamee, setFirstNamee, lastNamee, setLastNamee, image, setImage}=useContext(userContext);
   const navigate=useNavigate();
+  const dispatch = useDispatch();
   useEffect(()=>{
     if(!token){
       navigate("/login");
@@ -833,6 +845,8 @@ const Profile = () => {
   // }
     
     const handleSaveProfile = () => {
+      setLoading(true); 
+      dispatch(updateStart());
       // Perform validation if needed
   
       // Set up headers and data
@@ -870,10 +884,15 @@ const Profile = () => {
         .then(data => {
           // Handle the response data
           console.log('Response:', data);
+          setLoading(false);
   
           // Example: Check for success message
           if (data.message === 'user has been Updated successfully') {
-            alert('Profile Updated Successfully');
+            dispatch(updateSuccess(data.rest));
+            dispatch(updateProfilePage(data.profilePic)); // Dispatch action to update profile page
+            dispatch(updateFullName(data.rest.firstName));
+            // alert('Profile Updated Successfully');
+            toast.success('Profile Updated Successfully');
             // setImgUrl(data.rest.profilePic.secure_url);
             // setUserName(data.rest.firstName+" "+data.rest.lastName);
             setFirstName(data.rest.firstName);
@@ -882,12 +901,17 @@ const Profile = () => {
             
             // You can navigate the user to another page or perform other actions
           } else {
-            alert('Error updating profile', data.message);
+            // alert('Error updating profile', data.message);
+            dispatch(updateFailure(data.message));
+            toast.error('Error updating profile', data.message);
           }
         })
         .catch(error => {
           // Handle errors
+          setLoading(false);
           console.error('Error:', error);
+          dispatch(updateFailure('Error updating profile'));
+          toast.error('Error updating profile'); 
         });
     };
     const handleProfileClick = () => {
@@ -897,12 +921,15 @@ const Profile = () => {
   
     const handleImageChange = (e) => {
       setAvatar(e.target.files[0]);
+     
     };
   
   return (
         <>
       <Header />
       <div className="test">
+        <ToastContainer position="bottom-right" closeButton={<MdClose className="custom-closee" />} />
+      
         <div className="row">
           <div className="appear col-lg-3">
             <p className="user2 text-white text-center fs-2 text-capitalize" style={{position: "relative", left: "-10px", zIndex: "1", top: "10px", color: "#283D4F"}}>
@@ -944,16 +971,17 @@ Created by potrace 1.10, written by Peter Selinger 2001-2011
             </div>  */}
             
            
-
-            <span className="favouriate d-flex align-items-center justify-content-center " style={{position: "relative", top: "-480px", marginLeft: "20px"}}>
-              <img className="frame12" src={Frame} alt=""style={{marginBottom: "-3px", marginLeft: "-5px"}} />
-              <span style={{marginRight: "20px",fontSize: "30px", color: "#fff"}}>favorites</span>
-            </span>
+            <Link to={'/profileFavouriate'} style={{textDecoration: "none"}}>
+              <span className="favouriate d-flex align-items-center justify-content-center " style={{position: "relative", top: "-480px", marginLeft: "20px"}}>
+                <img className="frame12" src={Frame} alt=""style={{marginBottom: "-3px", marginLeft: "-5px"}} />
+                <span style={{marginRight: "20px",fontSize: "30px", color: "#fff"}}>favorites</span>
+              </span>
+            </Link>
           <div>
             </div>
           </div>
           <div className=" col-lg-9">
-            <div className="imgs d-flex align-items-center g-lg-5" onClick={handleProfileClick}>
+            <div className="imgs d-flex align-items-center g-lg-5 fadeInUp" onClick={handleProfileClick}>
               {/* <img className="prof" src={imgUrl} alt="" style={{boxShadow: "-20px -20px 50px rgba(168, 198, 234, 0.8), 20px 20px 50px rgba(168, 198, 234, 0.8)", backgroundColor: 'transparent', borderRadius: "50%"}} /> */}
               {image ? (
                 <img className="prof" src={image} alt="" style={{boxShadow: "-20px -20px 50px rgba(168, 198, 234, 0.8), 20px 20px 50px rgba(168, 198, 234, 0.8)", backgroundColor: 'transparent', borderRadius: "50%", objectFit: "cover"}} />
@@ -967,9 +995,9 @@ Created by potrace 1.10, written by Peter Selinger 2001-2011
               </div>
                 <div className="ellipse-1135"></div>
             </div>
-            <Form className="form11" onSubmit={e=>{
+            <Form className="form11 fadeInUp" onSubmit={e=>{
               e.preventDefault();
-            }}>
+            }} >
 
               <Row >
                 {/* <Form.Control type='file' name="avatar"
@@ -1017,7 +1045,7 @@ Created by potrace 1.10, written by Peter Selinger 2001-2011
                     </Form.Label>
                     <Form.Control
                       type="text"
-                      placeholder={firstNamee?.split(" ")[1]}
+                      placeholder={lastNamee?.split(" ")[0]}
                       className="lastName"
                       value={lastName}
                       onChange={(e) => setLastName(e.target.value)}
@@ -1150,8 +1178,32 @@ Created by potrace 1.10, written by Peter Selinger 2001-2011
                   </Form.Group>
                 </Col>
                 <Col lg={12} sm={6} md={9}>
-                  <div className="button d-flex align-items-center justify-content-center" style={{position: "relative", right: "150px"}}>
-                    <button onClick={handleSaveProfile} className="text-center" style={{width: "317px", height: "56px", borderRadius:"30px"}}>Save changes</button>
+                  <div className="button d-flex align-items-center justify-content-center fadeInUp" style={{position: "relative", right: "150px"}}>
+                    {/* <button onClick={handleSaveProfile} className="text-center" style={{width: "317px", height: "56px", borderRadius:"30px"}}>Save changes</button> */}
+                    <motion.button
+                  onClick={handleSaveProfile}
+                  type="button"
+                  className="text-center"
+                  style={{width: "317px", height: "56px", borderRadius:"30px"}}
+                  disabled={loading}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {loading ? ( // Render spinner when loading is true
+                    <>
+                      <Spinner
+                        as="span"
+                        animation="border"
+                        size="sm"
+                        role="status"
+                        aria-hidden="true"
+                      />
+                      <span className="ps-3">Loading...</span>
+                    </>
+                  ) : (
+                    "Save changes"
+                  )}
+                </motion.button>
                   </div>  
                 </Col>
               </Row>

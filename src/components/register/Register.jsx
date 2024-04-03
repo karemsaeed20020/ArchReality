@@ -9,9 +9,12 @@ import Rectangle1 from "../../assets/rectangle-831@2x.png";
 import Hide1 from "../../assets/gridiconsnotvisible@2x.png";
 import Visible from "../../assets/gridiconsvisible@2x.png";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import {motion} from 'framer-motion'
-
+import { Link, useNavigate } from "react-router-dom";
+import {  Spinner } from "react-bootstrap";
+import { motion } from "framer-motion";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { MdClose } from "react-icons/md";
 const Register = () => {
   const [firstname, setFirstName] = useState("");
   const [lastname, setLastName] = useState("");
@@ -19,16 +22,19 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [passwordError, setPasswordError] = useState("");
+  const [loading, setLoading] = useState(false);
   const navigation = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (password !== confirmPassword) {
       setPasswordError("Passwords do not match");
       return;
     }
 
     setPasswordError("");
+    setLoading(true);
 
     const apiEndpoint = "https://arch-reality.onrender.com/api/auth/register";
     const data = {
@@ -43,29 +49,49 @@ const Register = () => {
       const response = await axios.post(apiEndpoint, data);
       console.log("SignUp successful:", response.data);
       navigation("/");
+      toast.success("Registration successful!");
     } catch (error) {
+      setLoading(false);
       if (error.response) {
         console.error("Email confirmation failed:", error.response.data);
+
         if (error.response.data.message === "email is already exist") {
-          alert(
+          // alert(
+          //   "Email is already registered. Please log in or use a different email."
+          // );
+          toast.error(
             "Email is already registered. Please log in or use a different email."
           );
         } else {
-          alert("Registration failed. Please try again.");
+          // alert("Registration failed. Please try again.");
+          toast.error("Registration failed. Please try again.");
         }
       } else {
         console.error("Network error:", error.message);
-        alert(
+
+        // alert(
+        //   "Network error occurred. Please check your internet connection and try again."
+        // );
+        toast.error(
           "Network error occurred. Please check your internet connection and try again."
         );
       }
+    } finally {
+      setLoading(false); // Set loading to false after handling the response or error
     }
   };
 
   return (
-    <div className="container1">
+    <motion.div className="container1" initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.5 }}>
+      <ToastContainer
+        style={{position: "absolute", left: "1100px", top: "700px"}}
+        position="bottom-right"
+        closeButton={<MdClose className="custom-close" />}
+      />
       <div className="register">
-        <img className="register-child" alt="" src={Vector1}  />
+        <img className="register-child" alt="" src={Vector1} />
         <div className="arcreality1">ARCREALITY</div>
         <img className="register-item" alt="" src={Rectangle1} />
         <b className="cerate-new-account">Create new account</b>
@@ -148,9 +174,35 @@ const Register = () => {
               </div>
             </div>
             <div className="sign-up-wrapper">
-              <button type="submit" className="sign-up-button">
+              {/* <button type="submit" className="sign-up-button">
                 Sign up
-              </button>
+              </button> */}
+              <Link to={'/login'} style={{textDecoration: "none"}}>
+                <motion.button
+                  onClick={handleSubmit}
+                  type="button"
+                  className="sign-up-button"
+                  style={{ borderRadius: "15px" }}
+                  disabled={loading}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {loading ? ( // Render spinner when loading is true
+                    <>
+                      <Spinner
+                        as="span"
+                        animation="border"
+                        size="sm"
+                        role="status"
+                        aria-hidden="true"
+                      />
+                      <span className="ps-3">Loading...</span>
+                    </>
+                  ) : (
+                    "Sign Up"
+                  )}
+                </motion.button>
+              </Link>
             </div>
           </form>
         </div>
@@ -165,7 +217,7 @@ const Register = () => {
           <div className="or1">OR</div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

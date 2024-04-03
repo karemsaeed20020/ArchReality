@@ -1,0 +1,57 @@
+.prof1 {
+    width: 80px;
+    height: 80px;
+    margin-left: 25px;
+    margin-top: -20px;
+}
+.inf {
+    position: relative;
+    left: 20px;
+}
+.fullName {
+    background-color: #E1E1E1;
+    width: 130px;
+    height: 40px;
+    border-radius: 15px;
+    padding: 6px;
+    margin-left: 10px;
+    gap: 10px;
+    font-size: 18px;
+    text-wrap: nowrap;
+    line-height: 24px;
+    color: #283D4F;
+    font-weight: 600;
+}
+.inf1 {
+    margin-left: 45px;
+    color: #7B6E6E;
+    font-weight: 600;
+}
+.pagee1 {
+    background-image: url('../../assets/Rectangle\ 34625147.png');
+    background-size: cover;
+    position: relative;
+    top: -100px;
+}
+.pagee2 {
+    background-image: url('../../assets/Rectangle\ 34625147.png');
+    background-size: cover;
+    position: relative;
+    top: -90px; 
+}
+.appear {
+    height: 160vh;
+}
+@media screen and (max-width: 968px) {
+    .imgs {
+        position: relative;
+            top: -80px;
+            left: -20px;
+    }
+    .prof1 {
+        margin-bottom: 8px;
+    }
+    .appear {
+        height: 50vh;
+    }
+}
