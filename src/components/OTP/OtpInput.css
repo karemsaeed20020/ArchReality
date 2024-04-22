@@ -1,0 +1,126 @@
+.appear {
+    position: relative;
+  }
+  .containers {
+    transform: translate(-3%) !important;
+  }
+  
+  .bottom::before {
+    width: 170.02px;
+    height: 255.44px;
+    position: absolute;
+    top: 90px;
+    left: 250.44px;
+    border-radius: 16px 16px 0px 0px;
+    transform: rotate(-0.05deg);
+    position: absolute;
+  /* height: 100%; */
+  /* width: 100%; */
+
+  right: 0.1px;
+  bottom: 0.3px;
+
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: contain;
+  z-index: 1;
+  }
+
+  .primary-color{
+    color: #283D4F;
+}
+
+.btn-sz-primary{
+    width: 100%;
+    color: #fff !important;
+    background-color: #283D4F !important;
+}
+
+.btn-sz-primary:hover{
+    background-color: #283D4F;
+}
+
+.main-text{
+    font-size: 25px;
+    line-height: 1.4;
+    letter-spacing: 3px;
+}
+
+.main-input{
+    width: 80%;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0px !important;
+    border-bottom: 2px solid #283D4F !important;
+}
+.img-fluid {
+    height: 102vh !important;
+    transform: translate(-2%, -8%);
+}
+.btn {
+    width: 220px;
+    position: relative;
+    top: 10px;
+    color: #283D4F;
+}
+.back-to-login {
+    text-decoration: none;
+    position: relative;
+    left: -200px;
+}
+/* @media (max-width: 568px) {
+    .main-text {
+        position: relative;
+        left: 20px;
+    }
+    input {
+        transform: translate(-40%);
+    }
+    .btn {
+        position: relative;
+        left: 81px;
+    }
+    
+}
+@media (min-width: 1280px) and (max-width: 1400px) {
+    .back-to-login {
+        position: relative;
+        left: -70px;
+    }
+    
+} */
+
+@media (max-width: 578px) {
+    .img-fluid {
+        display: none;
+    }
+    .fe {
+        transform: translate(15%);
+    }
+    input {
+        transform: translate(-50%);
+        width: 70% !important;
+    }
+    .btn {
+        margin-top: 20px;
+        transform: translate(-10%);
+        width: 80%;
+    }
+}
+@media (min-width: 580px) and (max-width: 865px) {
+    .img-fluid {
+        display: none;
+    }
+    .fe {
+        transform: translate(10%);
+    }
+    input {
+        width: 70% !important;
+    }
+    .btn {
+        margin-top: 20px;
+        transform: translate(-5%);
+        width: 80%;
+    }
+}

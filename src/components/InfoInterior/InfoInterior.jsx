@@ -115,6 +115,7 @@ const InfoInterior = () => {
             onClick={handleMoreExteriorClick}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
+            className="bt"
           >
             {showMore ? "Show less" : "Show more"}
           </motion.button>

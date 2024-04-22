@@ -93,6 +93,7 @@ const Exterior = () => {
           onClick={handleMoreExteriorClick}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          className="sh1"
         >
           {showMore ? "Show less" : "Show more"}
         </motion.button>

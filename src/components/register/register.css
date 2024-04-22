@@ -1,12 +1,15 @@
 .register-child {
     position: absolute;
-    top: -274.77px;
+    /* top: -274.77px;
     left: -205.44px;
     border-radius: 130px;
     width: 876.84px;
     height: 1302.28px;
     object-fit: contain;
-    transform: rotate(-179.38deg);
+    transform: rotate(-179.38deg); */
+    width: 620.84px;
+  height: 1100.28px;
+  object-fit: cover;
 }
 input {
   border: none;
@@ -14,7 +17,7 @@ input {
 }
 .arcreality1 {
     position: absolute;
-    top: 161px;
+    top: 125px;
     left: 15px;
     font-size: 112px;
     letter-spacing: 0.17em;
@@ -27,11 +30,12 @@ input {
     justify-content: center;
     height: 100vh;
     /* width: 100vw; */
-    transform: translate(20%, 5%);
+    transform: translate(10%, 10%);
 }
 .register-item {
     position: absolute;
-    top: 229px;
+    /* top: 229px; */
+    top: 195px;
     left: 116px;
     width: 555px;
     height: 758px;
@@ -334,3 +338,110 @@ input {
 .register {
   transform: translate(-10%);
 }
+input {
+  border: none !important;
+  border: 1px solid #C6C6C6 !important;
+}
+.pass {
+  border: none !important;
+}
+.email {
+  border: none !important;
+}
+.confirm-password {
+  border: none !important;
+}
+/* @media (min-width: 350px) and (max-width: 750px) {
+  .last-name-wrapper {
+    position: relative;
+    top: 110px;
+    left: 180px;
+    width: 150px;
+    .email {
+      transform: translate(-55%, 7%);
+    }
+  }
+  .first-name-wrapper {
+    position: relative;
+    top: 180px;
+    width: 150px;
+    .email {
+      transform: translate(-55%, 7%);
+    }
+  }
+  .email {
+    transform: translate(-35%);
+  }
+  .password {
+    transform: translate(-29%);
+  }
+  .confirm-password {
+    transform: translate(-38%);
+  }
+  .vector1-icon {
+    position: relative;
+    top: 300px;
+  }
+  .or1 {
+    position: relative;
+    top: -310px;
+  }
+  .vec-child1 {
+    position: relative;
+    top: 272px;
+  }
+}
+@media (min-width: 750px) and (max-width: 1250px) {
+  .last-name-wrapper {
+    position: relative;
+    top: 110px;
+    left: 380px;
+    width: 280px;
+    .email {
+      transform: translate(-12%, 7%);
+    }
+  }
+  .first-name-wrapper {
+    position: relative;
+    top: 180px;
+    width: 280px;
+    .email {
+      transform: translate(-12%, 7%);
+    }
+  }
+  .email {
+    transform: translate(-5%);
+  }
+  .email-wrapper {
+    position: absolute;
+    top: 400px;
+  }
+  .password {
+    transform: translate(-2%);
+  }
+  .register-inner {
+    position: relative;
+    top: 400px;
+  }
+  .confirm-password {
+    transform: translate(-3%);
+  }
+  .cerate-new-account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .vector1-icon {
+    position: relative;
+    top: 200px;
+  }
+  .or1 {
+    position: relative;
+    top: -310px;
+  }
+  .vec-child1 {
+    position: relative;
+    top: 272px;
+    left: 150px;
+  }
+} */

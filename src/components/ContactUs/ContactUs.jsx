@@ -146,7 +146,7 @@ const ContactUs = () => {
               {/* <textarea name="" id="" cols="30" rows="10" style={{width: "465px", height: "140px", backgroundColor: "#F9F9F9"}} placeholder='Your message...'></textarea> */}
               <textarea
                 ref={messageRef}
-                class="form-control"
+                className="form-control"
                 id="exampleFormControlTextarea1"
                 cols="30"
                 rows="10"

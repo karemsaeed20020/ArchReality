@@ -8,6 +8,17 @@
     /* background-color: #A8C6EA; */
     height: 50vh;
     /* box-shadow: rgb(66, 107, 157) 5px 10px 30px -10px; */
+    
+    position: relative;
+    left: 70px;
+    overflow: none;
+}
+
+@media (min-width: 1400px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1600px !important;
+
+  }
 }
 
 .container-child {
@@ -34,6 +45,7 @@
   font-size: 112px;
   letter-spacing: 0.17em;
   font-family: var(--font-jomhuria);
+  padding: 50px;
 }
 .log-in {
   position: absolute;
@@ -273,11 +285,16 @@ button{
   border-radius: 10px;
   padding: 16px;
 }
+input {
+  border: 1px solid #C6C6C6 !important;
+}
+
 
 @media (max-width: 576px) {
   .container {
     /* padding: 10px; */
     min-width: 400px;
+    transform: translate(-25%);
   }
   .login-form {
     margin-top: 25rem;
@@ -285,8 +302,30 @@ button{
     right: 40px;
     top: 40px;
   }
+  .bv {
+    transform: translate(30%) !important;
+  }
   input {
     transform: translate(-22%);
+    /* transform: translate(20%) !important; */
+    /* transform: translate(-15%); */
+  }
+  .fo {
+    /* transform: translate(7%); */
+     transform: translate(-7%); 
+    
+  }
+  .forget-password {
+    /* transform: translate(50%); */
+    transform: translate(50%);
+    display: flex;
+    text-align: center;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: -53px;
+    top: -19px;
   }
   
   .fo.form-control1,
@@ -300,7 +339,7 @@ button{
   input {
     flex-direction: column;
     position: relative;
-    left: 100px;
+    left: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -353,6 +392,16 @@ button{
   .container {
     max-width: 600px;
   }
+  
+}
+@media (min-width: 500px) and (max-width: 992px) {
+  .container {
+    max-width: 600px;
+  }
+  .fo {
+    transform: translate(-5%);
+  }
+  
 }
 .custom-toast {
   white-space: nowrap; 
@@ -384,5 +433,12 @@ button{
   }
   .container-item {
     display: none;
+  }
+}
+@media (min-width: 350px) and (max-width: 410px) {
+  .fo {
+    /* transform: translate(7%); */
+     transform: translate(10%); 
+    
   }
 }

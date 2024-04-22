@@ -6,7 +6,7 @@ import Vector1 from "../../assets/vector-328@2x.png";
 import Vector2 from "../../assets/vector-1@2x.png";
 import Vector3 from "../../assets/vector-2@2x.png";
 import Rectangle from "../../assets/rectangle-830@2x.png";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { userContext } from "../../context/UserContext";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -101,7 +101,7 @@ const Login = ({ match }) => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <motion.img className="container-child" alt="" src={Vector1} />
+        <motion.img className="container-child " alt="" src={Vector1} />
         <motion.img className="container-item" alt="" src={Rectangle} />
         <div className="arcreality">ARCHREALITY</div>
         <b className="log-in">Log in</b>
@@ -117,12 +117,14 @@ const Login = ({ match }) => {
           <div className="mb-3">
             <input
               type="password"
-              className="form-control1"
+              className="form-control1 bv"
               placeholder="Password"
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <div className="forget-password">Forget password ?</div>
+          <Link style={{textDecoration: "none"}} to={'/forget-password'}>
+            <div className="forget-password">Forget password ?</div>
+          </Link>
           <motion.button
             onClick={handleSubmit}
             type="button"

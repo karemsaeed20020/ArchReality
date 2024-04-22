@@ -70,3 +70,14 @@
       display: none;
     }
   }
+  @media (max-width: 391px) {
+    .bt {
+      transform: translate(-10%);
+    }
+  }
+  @media (min-width: 500px) and (max-width: 850px) {
+    .bt {
+      transform: translate(-150%);
+    }
+  }
+ 

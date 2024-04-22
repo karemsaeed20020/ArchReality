@@ -46,7 +46,7 @@ const Interior = () => {
       </motion.div>
       <div className="page">
         <div className="details d-flex align-items-center justify-content-between ms-5 mt-2">
-          <h3 className="design">Interior Designs</h3>
+          <h3 className="desig1">Interior Designs</h3>
         </div>
         <div className="row mx-3">
           {/* Render details based on showMore state */}
@@ -90,6 +90,7 @@ const Interior = () => {
           onClick={handleMoreInteriorClick}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          className="sh"
         >
           {showMore ? "Show less" : "Show more"}
         </motion.button>

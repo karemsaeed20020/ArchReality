@@ -88,7 +88,7 @@
     padding: 0 var(--padding-16xl) 0 0;
   }
 
-.design {
+.desig1 {
   color: #283D4F;
   font-size: 50px;
   font-weight: 600;
@@ -151,6 +151,16 @@
     right: 120px;
     padding: 10px;
   }
+  .desig1 {
+    position: relative; 
+    top: 30px ;
+    right: 10px ;
+    font-size: 40px;
+    font-weight: 600;
+    text-wrap: nowrap ;
+    padding: 15px;
+    color: #283D4F;
+  }
   .interior-exterior-toggle {
     /* position: relative; */
     margin-top: 20px;
@@ -180,6 +190,11 @@
     position: relative;
     left: -600px;
 }
+.sh {
+  transform: translate(-17%) !important;
+}
+
+
   
  }
 .more {
@@ -191,4 +206,20 @@
     position: relative;
     top: -40px;
     
+}
+@media (min-width: 590px) and (max-width: 850px) {
+  .sh {
+    transform: translate(-170%) !important;
+  }
+  .card-img-top {
+    border-radius: 15px !important;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1450px) {
+  .sh {
+    transform: translate(-70%) !important;
+  }
+  .card-img-top {
+    border-radius: 15px !important;
+  }
 }

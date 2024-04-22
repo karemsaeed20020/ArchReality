@@ -188,3 +188,19 @@
     position: relative;
     left: 700px;
 }
+@media (min-width: 590px) and (max-width: 850px) {
+  .sh1 {
+    transform: translate(-170%) !important;
+  }
+  .card-img-top {
+    border-radius: 15px !important;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1450px) {
+  .sh1 {
+    transform: translate(-70%) !important;
+  }
+  .card-img-top {
+    border-radius: 15px !important;
+  }
+}

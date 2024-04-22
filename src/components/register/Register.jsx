@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./register.css";
 import Frame1 from "../../assets/frame-13@2x.png";
 import Frame2 from "../../assets/frame-14@2x.png";
-import Vector1 from "../../assets/vector-328@2x.png";
+import Vector10 from "../../assets/Vector 328 (1).png";
 import Vector2 from "../../assets/vector-1@2x.png";
 import Vector3 from "../../assets/vector-2@2x.png";
 import Rectangle1 from "../../assets/rectangle-831@2x.png";
@@ -10,7 +10,7 @@ import Hide1 from "../../assets/gridiconsnotvisible@2x.png";
 import Visible from "../../assets/gridiconsvisible@2x.png";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import {  Spinner } from "react-bootstrap";
+import { Spinner } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -23,7 +23,12 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [passwordVisible, setPasswordVisible] = useState(false);
+
   const navigation = useNavigate();
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -82,16 +87,19 @@ const Register = () => {
   };
 
   return (
-    <motion.div className="container1" initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ duration: 0.5 }}>
+    <motion.div
+      className="container1"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <ToastContainer
-        style={{position: "absolute", left: "1100px", top: "700px"}}
+        style={{ position: "absolute", left: "1100px", top: "700px" }}
         position="bottom-right"
         closeButton={<MdClose className="custom-close" />}
       />
       <div className="register">
-        <img className="register-child" alt="" src={Vector1} />
+        <img className="register-child" alt="" src={Vector10} />
         <div className="arcreality1">ARCREALITY</div>
         <img className="register-item" alt="" src={Rectangle1} />
         <b className="cerate-new-account">Create new account</b>
@@ -100,18 +108,23 @@ const Register = () => {
             <div className="register-inner">
               <div className="password-parent">
                 <input
-                  type="password"
+                  type={passwordVisible ? "text" : "password"}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="password"
+                  className="password pass"
                   placeholder="Password"
                   style={{
-                    minWidth: "100%",
+                    minWidth: "350%",
                     top: "0",
                     border: "none",
                     background: "none",
                   }}
                 />
-                <img className="gridiconsvisible" alt="" src={Visible} />
+                <img
+                  className="gridiconsvisible"
+                  alt=""
+                  src={passwordVisible ? Visible : Hide1}
+                  onClick={togglePasswordVisibility}
+                />
               </div>
             </div>
             <div className="email-wrapper">
@@ -159,7 +172,7 @@ const Register = () => {
             <div className="frame-div">
               <div className="confirm-password-parent ">
                 <input
-                  type="password"
+                  type={passwordVisible ? "text" : "password"}
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   className="confirm-password"
                   placeholder="Confirm Password"
@@ -170,14 +183,19 @@ const Register = () => {
                     background: "none",
                   }}
                 />
-                <img className="gridiconsvisible" alt="" src={Hide1} />
+                <img
+                  className="gridiconsvisible"
+                  alt=""
+                  src={passwordVisible ? Visible : Hide1}
+                  onClick={togglePasswordVisibility}
+                />
               </div>
             </div>
             <div className="sign-up-wrapper">
               {/* <button type="submit" className="sign-up-button">
                 Sign up
               </button> */}
-              <Link to={'/login'} style={{textDecoration: "none"}}>
+              <Link to={"/login"} style={{ textDecoration: "none" }}>
                 <motion.button
                   onClick={handleSubmit}
                   type="button"

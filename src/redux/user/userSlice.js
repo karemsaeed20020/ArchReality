@@ -48,8 +48,22 @@ const userSlice = createSlice({
           updateFullName: (state, action) => {
             state.fullName = action.payload;
           },
+          forgetPasswordStart: (state) => {
+            state.loading = true;
+            state.error = null;
+          },
+          forgetPasswordSuccess: (state) => {
+            state.loading = false;
+            state.error = null;
+          },
+          forgetPasswordFailure: (state, action) => {
+            state.loading = false;
+            state.error = action.payload;
+          },
+          
     }
+    // +  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 });
 
-export const {signInStart, signInSuccess, signInFailure, updateStart, updateSuccess, updateFailure, updateProfilePage, updateFullName} = userSlice.actions;
+export const {signInStart, signInSuccess, signInFailure, updateStart, updateSuccess, updateFailure, updateProfilePage, updateFullName, forgetPasswordStart, forgetPasswordSuccess, forgetPasswordFailure} = userSlice.actions;
 export default userSlice.reducer;

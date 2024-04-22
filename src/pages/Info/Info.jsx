@@ -108,9 +108,9 @@ const Info = () => {
           </Link>
         </div>
 
-        <div className="row mx-3">
+        <div className="row  mx-3">
           {details1.slice(1, 4).map((detail1, i) => (
-            <motion.div className="col-lg-4 col-md-6 mb-4" key={i} initial={{ opacity: 0, y: 100 }}
+            <motion.div className="col-lg-4 ce col-md-6 mb-4" key={i} initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: i * 0.1 }}>
               <Card style={{ border: "none", background: "transparent" }}>
