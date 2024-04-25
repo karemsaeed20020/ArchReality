@@ -103,7 +103,7 @@ const Register = () => {
         <div className="arcreality1">ARCREALITY</div>
         <img className="register-item" alt="" src={Rectangle1} />
         <b className="cerate-new-account">Create new account</b>
-        <div className="sign-up-container">
+        <div className="sign-up-container sign-up-wrapper1">
           <form onSubmit={handleSubmit}>
             <div className="register-inner">
               <div className="password-parent">
@@ -131,7 +131,7 @@ const Register = () => {
               <input
                 type="email"
                 onChange={(e) => setEmail(e.target.value)}
-                className="email"
+                className="email we"
                 placeholder="Email"
                 style={{
                   minWidth: "100%",
@@ -141,11 +141,11 @@ const Register = () => {
                 }}
               />
             </div>
-            <div className="first-name-wrapper">
+            <div className="first-name-wrapper wrap">
               <input
                 type="text"
                 onChange={(e) => setFirstName(e.target.value)}
-                className="email"
+                className="email wrap3"
                 placeholder="First Name"
                 style={{
                   minWidth: "100%",
@@ -155,10 +155,10 @@ const Register = () => {
                 }}
               />
             </div>
-            <div className="last-name-wrapper">
+            <div className="last-name-wrapper wrap1">
               <input
                 onChange={(e) => setLastName(e.target.value)}
-                className="email"
+                className="email wrap2"
                 type="text"
                 placeholder="Last Name"
                 style={{
@@ -174,7 +174,7 @@ const Register = () => {
                 <input
                   type={passwordVisible ? "text" : "password"}
                   onChange={(e) => setConfirmPassword(e.target.value)}
-                  className="confirm-password"
+                  className="confirm-password confirm"
                   placeholder="Confirm Password"
                   style={{
                     minWidth: "100%",
@@ -224,14 +224,14 @@ const Register = () => {
             </div>
           </form>
         </div>
-        <div className="frame1-parent">
+        <div className="frame1-parent frame2-parent">
           <img className="frame-child" alt="" src={Frame1} />
           <img className="frame-child" alt="" src={Frame2} />
         </div>
-        <div className="sign1-up-with"> Sign up with</div>
-        <img className="vector1-icon" alt="" src={Vector2} />
-        <img className="vec-child1" alt="" src={Vector3} />
-        <div className="or1-wrapper">
+        <div className="sign1-up-with sign2-up"> Sign up with</div>
+        <img className="vector1-icon vector2-icon" alt="" src={Vector2} />
+        <img className="vec-child1 vec2" alt="" src={Vector3} />
+        <div className="or1-wrapper or2">
           <div className="or1">OR</div>
         </div>
       </div>

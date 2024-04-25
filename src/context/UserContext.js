@@ -1,4 +1,6 @@
 import { createContext, useEffect, useState } from "react";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../config/firebase";
 
 export const userContext=createContext();
 export default function UserProvider({children}){
@@ -7,9 +9,11 @@ export default function UserProvider({children}){
     const [firstNamee, setFirstNamee] = useState(null);
   const [lastNamee, setLastNamee] = useState(null);
   const [image, setImage] = useState(null);
+  // const [user, setUser] = useState(null);
+
 
   useEffect(() => console.log(token), [token]);
-
+  
   const fullName = `${firstNamee} ${lastNamee}`;
     
     useEffect(()=>console.log(token),[token]);
@@ -23,7 +27,7 @@ export default function UserProvider({children}){
         setLastNamee,
         fullName,
         image,
-        setImage
+        setImage,
     }
     return(
         <userContext.Provider value={values}>

@@ -791,7 +791,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { MdClose } from 'react-icons/md';
 import { updateStart, updateSuccess, updateFailure, updateProfilePage, updateFullName } from '../../redux/user/userSlice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 
 
@@ -809,6 +809,8 @@ const Profile = () => {
   const [avatar,setAvatar]=useState(null);
   const [imgUrl,setImgUrl]=useState("");
   const [loading, setLoading] = useState(false);
+  const loadings = useSelector((state) => state.user.loading);
+
   // const {token,userName,setUserName}=useContext(userContext);
   const {token,fullName, firstNamee, setFirstNamee, lastNamee, setLastNamee, image, setImage}=useContext(userContext);
   const navigate=useNavigate();
@@ -847,6 +849,7 @@ const Profile = () => {
     const handleSaveProfile = () => {
       setLoading(true); 
       dispatch(updateStart());
+      
       // Perform validation if needed
   
       // Set up headers and data
@@ -923,6 +926,37 @@ const Profile = () => {
       setAvatar(e.target.files[0]);
      
     };
+    const handleLogout = () => {
+      dispatch(updateStart());
+  
+      fetch('https://arch-reality.onrender.com/api/auth/logout', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          email: email
+        })
+      })
+      .then(response => {
+        if (response.ok) {
+          // If logout is successful, update Redux state, display success message, and redirect to login page
+          dispatch(updateSuccess());
+          toast.success('Logged out successfully');
+          navigate('/login'); // Redirect to login page
+        } else {
+          // If logout fails, display error message
+          dispatch(updateFailure('Error logging out'));
+          toast.error('Error logging out');
+        }
+      })
+      .catch(error => {
+        // If an error occurs during the logout process, display error message
+        dispatch(updateFailure('Error logging out'));
+        toast.error('Error logging out');
+      });
+    };
+  
   
   return (
         <>
@@ -930,8 +964,8 @@ const Profile = () => {
       <div className="test">
         <ToastContainer position="bottom-right" closeButton={<MdClose className="custom-closee" />} />
       
-        <div className="row">
-          <div className="appear col-lg-3">
+        <div className="row uy">
+          <div className="appear fd col-lg-3">
             <p className="user2 text-white text-center fs-2 text-capitalize" style={{position: "relative", left: "-10px", zIndex: "1", top: "10px", color: "#283D4F"}}>
               User Profile
             </p>
@@ -981,7 +1015,7 @@ Created by potrace 1.10, written by Peter Selinger 2001-2011
             </div>
           </div>
           <div className=" col-lg-9">
-            <div className="imgs d-flex align-items-center g-lg-5 fadeInUp" onClick={handleProfileClick}>
+            <div className="imgs im d-flex align-items-center g-lg-5 fadeInUp" onClick={handleProfileClick}>
               {/* <img className="prof" src={imgUrl} alt="" style={{boxShadow: "-20px -20px 50px rgba(168, 198, 234, 0.8), 20px 20px 50px rgba(168, 198, 234, 0.8)", backgroundColor: 'transparent', borderRadius: "50%"}} /> */}
               {image ? (
                 <img className="prof" src={image} alt="" style={{boxShadow: "-20px -20px 50px rgba(168, 198, 234, 0.8), 20px 20px 50px rgba(168, 198, 234, 0.8)", backgroundColor: 'transparent', borderRadius: "50%", objectFit: "cover"}} />
@@ -999,7 +1033,7 @@ Created by potrace 1.10, written by Peter Selinger 2001-2011
               e.preventDefault();
             }} >
 
-              <Row >
+              <Row className="vh">
                 {/* <Form.Control type='file' name="avatar"
                 onChange={(e)=>{setAvatar(e.target.files[0])}}></Form.Control> */}
                 <Col xs={10}  sm={12} md={6} className="g-md-3 ">
@@ -1149,21 +1183,21 @@ Created by potrace 1.10, written by Peter Selinger 2001-2011
                   </Form.Group>
                 </Col>
                 <Col xs={10} sm={12} md={6} className="g-lg-3">
-                  <Form.Group className='ms-sm-5'>
+                  <Form.Group className='ms-sm-5 Name5'>
                     <Form.Label
                       style={{
                         position: "relative",
                         top: "-20px",
                         left: "-120px",
                       }}
-                      className="last1 mb-3"
+                      className="last1 last5 mb-3"
                     >
                       Confirm Password
                     </Form.Label>
                     <Form.Control
                       type="password"                    
                       placeholder=""
-                      className="lastName2"
+                      className="lastName2 lastName4"
                       value={cPassword}
                       onChange={(e) => setCPassword(e.target.value)}
                       style={{
@@ -1183,7 +1217,7 @@ Created by potrace 1.10, written by Peter Selinger 2001-2011
                     <motion.button
                   onClick={handleSaveProfile}
                   type="button"
-                  className="text-center"
+                  className="text-center xz"
                   style={{width: "317px", height: "56px", borderRadius:"30px"}}
                   disabled={loading}
                   whileHover={{ scale: 1.05 }}
@@ -1206,6 +1240,35 @@ Created by potrace 1.10, written by Peter Selinger 2001-2011
                 </motion.button>
                   </div>  
                 </Col>
+                <Col lg={12} sm={6} md={9}>
+                <div className="button mt-2 d-flex align-items-center justify-content-center fadeInUp" style={{ position: "relative", right: "150px" }}>
+                  <motion.button
+                    onClick={handleLogout}
+                    type="button"
+                    className="text-center zx"
+                    style={{ width: "317px", height: "56px", borderRadius: "30px" }}
+                    disabled={loading}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    {loadings ? (
+                      <>
+                        <Spinner
+                          as="span"
+                          animation="border"
+                          size="sm"
+                          role="status"
+                          aria-hidden="true"
+                        />
+                        <span className="ps-3">Logging out...</span>
+                      </>
+                    ) : (
+                      'Logout'
+                    )}
+                  </motion.button>
+                </div>
+              </Col>
+                
               </Row>
             </Form>
           </div>

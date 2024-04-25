@@ -21,6 +21,8 @@ import {
   signInFailure,
 } from "../../redux/user/userSlice";
 
+
+
 const Login = ({ match }) => {
   // const {setToken,setUserName}=useContext(userContext);
   const { setToken, setFirstNamee, setLastNamee, setImage } =
@@ -90,6 +92,8 @@ const Login = ({ match }) => {
         // setLoading(false); // Set loading to false when the fetch operation ends
       });
   };
+  
+ 
 
   return (
     <motion.div className="login-container">
@@ -157,7 +161,8 @@ const Login = ({ match }) => {
           )}
         </form>
         <div className="frame-parent">
-          <img className="frame-child" alt="" src={Frame1} />
+        
+        <img className="frame-child" alt=""  src={Frame1} />
           <img className="frame-child" alt="" src={Frame2} />
         </div>
         <div className="log-in-with"> log in with</div>

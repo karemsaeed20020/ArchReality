@@ -608,31 +608,7 @@ const Test = () => {
 //     </div>
 // </div>
 <>
-  {!emailSubmitted ? (
-    <div className="container-fluid pt-5">
-    <div className="row">
-      <div className="col-lg-6">
-        {/* Display image only on large screens */}
-        <img src={Test1} alt="Main IMG" className="img-fluid d-none d-lg-block" />
-      </div>
-      <div className="col-lg-6 pt-5">
-        <h2 className="main-text pt-5 mt-5">Forgot <br /> Your Password</h2>
-        <input type="email" placeholder="Enter Your E-mail" className="form-control main-input mt-5" value={email} onChange={(e) => setEmail(e.target.value)} />
-        <div className="row mt-3">
-          <div className="col-md-6">
-            {/* Adjust column width for medium screens */}
-            <button className="btn btn-sz-primary" onClick={handleSubmit}>Submit</button>
-          </div>
-          <div className="col-md-6 pt-2">
-            <Link to={'/login'} className="back-to-login">Back To Login</Link>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  ) : (
-    <OtpInput email={email} />
-  )}
+ <h1>Test</h1>
 </>
 
     

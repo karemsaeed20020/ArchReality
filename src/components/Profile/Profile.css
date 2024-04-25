@@ -250,7 +250,19 @@
     left: -50px;
   }
   
-  
+@media (min-width: 750px) and (max-width:1025px)  {
+  .uy {
+    position: relative;
+    left: 1110px;
+  }
+  .imgs {
+
+  }
+  .lastName4 {
+    position: relative;
+    left: -140px;
+  }
+}
     
 @media (min-width: 350px) and (max-width:925px) {
     .imgs {
@@ -310,6 +322,38 @@
     svg {
         display: none;
     }
+    .vh {
+      transform: translate(20%);
+    }
+    .Name5 {
+      position: relative;
+  left: 71px;
+    }
+    .last5 {
+      position: relative;
+      left: -162px !important;
+    }
+    .xz {
+      position: relative;
+  left: 20px;
+    }
+    .zx {
+      position: relative;
+  left: 20px;
+    }
+    .fd {
+      min-width: 130%;
+    }
+}
+@media (min-width: 414px) and (max-width: 768px) {
+  .xz {
+    position: relative;
+left: -20px;
+  }
+  .zx {
+    position: relative;
+left: -20px;
+  }
 }
 @media (min-width: 792px) and (max-width: 991px) {
     .email {
@@ -338,10 +382,10 @@
         position: relative;
         left: -70px !important;
     }
-    .lastName2 {
+    /* .lastName2 {
         position: relative;
         left: 20px;
-    }
+    } */
     .lastName3 {
         width: calc(90% - 5px) !important;
         position: relative !important;
@@ -407,10 +451,10 @@
         position: relative;
         left: 97px !important;
     }
-    .last1 {
+    /* .last1 {
         position: relative;
         left: -84px !important;
-    }
+    } */
   
     .button {
       text-align: center;

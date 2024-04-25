@@ -351,6 +351,288 @@ input {
 .confirm-password {
   border: none !important;
 }
+@media (min-width: 350px) and (max-width: 750px) {
+  .sign-up-button {
+    position: relative;
+    top: 500px;
+    left: 40px;
+    max-width: fit-content;
+  }
+  .we {
+    transform: translate(-50%);
+  }
+  .pass {
+    transform: translate(-2%);
+  }
+  .confirm {
+    transform: translate(-8%);
+  }
+  .wrap1 {
+    position: relative;
+    width: 40%;
+    left: 177px;
+    top: 190px;
+  }
+  .wrap2 {
+    transform: translate(-68%);
+  }
+  .wrap3 {
+    transform: translate(-68%);
+  }
+  .wrap {
+    width: 40%;
+  }
+  .sign2-up {
+    position: relative;
+    left: 30px;
+    top: 600px;
+    font-size: 20px;
+  }
+  .frame2-parent {
+    position: relative;
+    left: 120px;
+    top: 700px;
+    bottom: 10px;
+  }
+  .or2 {
+    position: relative;
+    left: 159px;
+    top: 465px;
+  }
+  .vector2-icon {
+    position: relative;
+  left: 200px;
+  top: 532px;
+  }
+  .vec2 {
+    position: relative;
+    left: -16px;
+    right: 20px;
+    top: 503px;
+  }
+}
+@media (min-width: 410px) and (max-width: 450px) {
+  .sign-up-button {
+    position: relative;
+    top: 500px;
+    left: 60px;
+    max-width: fit-content;
+  }
+  .we {
+    transform: translate(-55%);
+  }
+  .pass {
+    transform: translate(-2%);
+  }
+  .confirm {
+    transform: translate(-8%);
+  }
+  .wrap1 {
+    position: relative;
+    width: 40%;
+    left: 200px;
+    top: 190px;
+  }
+  .wrap2 {
+    transform: translate(-110%);
+  }
+  .wrap3 {
+    transform: translate(-110%);
+  }
+  .wrap {
+    width: 40%;
+  }
+  .vector2-icon {
+    position: relative;
+  left: -18px;
+  top: 585px;
+  }
+  .sign2-up {
+    position: relative;
+    left: -10px;
+    top: 600px;
+    font-size: 20px;
+  }
+  .frame2-parent {
+    position: relative;
+    left: 120px;
+    top: 700px;
+    bottom: 10px;
+  }
+  .vector2-icon {
+    position: relative;
+  left: -30px;
+  top: 504px;
+  }
+  .vec2 {
+    position: relative;
+    left: -16px;
+    right: 20px;
+    top: 503px;
+  }
+  
+}
+@media (min-width: 750px) and (max-width: 1250px) {
+  .register-child {
+    display: none;
+  }
+  .arcreality1 {
+    display: none;
+  }
+  .register-item {
+    display: none;
+  }
+  .cerate-new-account {
+    position: relative;
+    left: 50px;
+    font-size: 50px;
+    top: 20px;
+  }
+  .sign-up-wrapper1 {
+    position: relative;
+  left: -670px;
+  top: -208px;
+  }
+  .wrap {
+    position: relative;
+  top: 294px;
+  width: 25%;
+  padding: 8px;
+  }
+  .wrap1 {
+    position: relative;
+  top: 222px;
+  width: 25%;
+  padding: 8px;
+  }
+  .wrap2 {
+    transform: translate(-16%) !important;
+  }
+  .wrap3 {
+    transform: translate(-16%) !important; 
+  }
+  .sign-up-button {transform: translate(-4%, -263%);}
+  .we {
+    transform: translate(-4%) !important;
+    top: 0;
+    min-width: 100%;
+  }
+  .frame2-parent {
+    position: relative;
+    left: 260px;
+    top: 500px;
+  }
+  .sign2-up {
+    position: relative;
+    left: -57px;
+    top: 391px;
+  }
+  .or2 {
+    transform: translate(-289%);
+    position: absolute;
+    left: 470px;
+    top: 590px
+  }
+  .vec2 {
+    position: relative;
+  left: 120px;
+  top: 300px;
+  }
+  .vector2-icon {
+    position: absolute;
+  left: 390px;
+  top: 615px;
+  }
+}
+@media (min-width: 390px) and (max-width: 410px) {
+  .vector2-icon {
+    position: relative;
+    left: -29px;
+    top: 505px;
+  }
+  .wrap1 {
+    position: relative;
+    left: 190px;
+  }
+}
+@media (min-width: 810px) and (max-width: 915px) {
+  .sign-up-wrapper1 {
+    transform: translate(1%, 4%);
+  }
+}
+@media (min-width: 1280px) and (max-width: 1400px) {
+  .cerate-new-account {
+    position: absolute;
+    left: 620px;
+    font-size: 70px;
+  }
+}
+@media (min-width: 1024) and (max-width:1250px) {
+  .wrap1 {
+    transform: translate(60%, 97%);
+  }
+}
+@media (max-width:320px) {
+  .sign-up-button {
+    position: relative;
+    top: 500px;
+    left: 40px;
+    max-width: fit-content;
+  }
+  .we {
+    transform: translate(-50%);
+  }
+  .pass {
+    transform: translate(-2%);
+  }
+  .confirm {
+    transform: translate(-8%);
+  }
+  .wrap1 {
+    position: relative;
+    width: 40%;
+    left: 177px;
+    top: 190px;
+  }
+  .wrap2 {
+    transform: translate(-68%);
+  }
+  .wrap3 {
+    transform: translate(-68%);
+  }
+  .wrap {
+    width: 40%;
+  }
+  .sign2-up {
+    position: relative;
+    left: 30px;
+    top: 600px;
+    font-size: 20px;
+  }
+  .frame2-parent {
+    position: relative;
+    left: 120px;
+    top: 700px;
+    bottom: 10px;
+  }
+  .or2 {
+    position: relative;
+    left: 159px;
+    top: 465px;
+  }
+  .vector2-icon {
+    position: relative;
+  left: 200px;
+  top: 532px;
+  }
+  .vec2 {
+    position: relative;
+    left: -16px;
+    right: 20px;
+    top: 503px;
+  }
+}
+
 /* @media (min-width: 350px) and (max-width: 750px) {
   .last-name-wrapper {
     position: relative;
