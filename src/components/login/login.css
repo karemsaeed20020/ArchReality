@@ -442,3 +442,22 @@ input {
     
   }
 }
+@media (min-width: 750px) and (max-width: 1300px) {
+  .arcreality {
+    display: none !important;
+  }
+  .container-child {
+    display: none;
+  }
+  .container-item {
+    display: none;
+  }
+  .container {
+    overflow: hidden;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1441px) {
+  .container {
+    transform: translate(-8%);
+  }
+}

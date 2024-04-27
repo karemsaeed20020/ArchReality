@@ -569,7 +569,7 @@ input {
 }
 @media (min-width: 1024) and (max-width:1250px) {
   .wrap1 {
-    transform: translate(60%, 97%);
+    transform: translate(70%, 97%);
   }
 }
 @media (max-width:320px) {
@@ -632,7 +632,11 @@ input {
     top: 503px;
   }
 }
-
+@media (min-width: 1025) and (max-width: 1250) {
+  .on {
+    transform: translate(93%, 24%);
+  }
+}
 /* @media (min-width: 350px) and (max-width: 750px) {
   .last-name-wrapper {
     position: relative;

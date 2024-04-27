@@ -30,6 +30,7 @@
     font-weight: 700;
     line-height: 42px;
     display: block ruby;
+    text-wrap: nowrap;
 }
 .use {
     position: relative;
@@ -263,7 +264,12 @@
     left: -140px;
   }
 }
-    
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ensures it takes the full height of its parent */
+}
 @media (min-width: 350px) and (max-width:925px) {
     .imgs {
         display: flex;

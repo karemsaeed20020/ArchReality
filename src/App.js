@@ -24,6 +24,7 @@ import OtpInput from "./components/OTP/OtpInput";
 import ForgetPassword from "./components/ForgetPassword/ForgetPassword";
 import ResetPassword from "./components/ResetPassword/ResetPassword";
 import QRCode from "./pages/QRCode/QRCode";
+import Test2 from "./components/Test2/Test2";
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -63,6 +64,7 @@ function App() {
           <Route path="/forget-password" element={<ForgetPassword />} />
           <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/qr-code" element={<QRCode />} />
+          <Route path="/test2" element={<Test2 />} />
         </Routes>
       )}
     </div>

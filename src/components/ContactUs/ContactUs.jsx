@@ -44,7 +44,7 @@ const ContactUs = () => {
         <img src={Contact} alt="" />
         <h1 className="contact text-white ">Contact us</h1>
       </motion.div>
-      <div className="talk d-flex align-items-center">
+      <div className="talk d-flex align-items-center lh">
         <div className="shape"></div>
         <div className="wrapper p-5 mt-5 mx-4">
           <motion.span
@@ -65,7 +65,7 @@ const ContactUs = () => {
             and we’ll be in touch shortly.
           </motion.p>
           <div className="lines mb-5">
-            <div className="line d-flex align-items-center mb-4">
+            <div className="line e d-flex align-items-center mb-4">
               <img src={Frame1} alt="" className="frame" />
               <span>55 Said street , Tanta</span>
             </div>
@@ -80,19 +80,19 @@ const ContactUs = () => {
           </div>
         </div>
         <motion.div
-          className="form align-items-center"
+          className="form v align-items-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.5 }}
         >
-          <form onSubmit={handleSubmit}>
+          <form className='x' onSubmit={handleSubmit}>
             <div class="row mb-3 p-1">
               <div class="col">
                 <input
                   ref={firstNameRef}
                   style={{ backgroundColor: "#F9F9F9" }}
                   type="text"
-                  class="form-control"
+                  className="form-control hh"
                   placeholder="First name"
                   aria-label="First name"
                   id="firstName"
@@ -105,7 +105,7 @@ const ContactUs = () => {
                   ref={lastNameRef}
                   style={{ backgroundColor: "#F9F9F9" }}
                   type="text"
-                  class="form-control"
+                  className="form-control mn"
                   placeholder="Last name"
                   aria-label="Last name"
                   id="lastName"
@@ -120,7 +120,7 @@ const ContactUs = () => {
                   ref={emailRef}
                   style={{ backgroundColor: "#F9F9F9" }}
                   type="email"
-                  class="form-control"
+                  className="form-control nm"
                   placeholder="Email*"
                   aria-label="Email*"
                   value={email}
@@ -129,12 +129,12 @@ const ContactUs = () => {
               </div>
               <br />
             </div>
-            <div class="col mb-3">
+            <div className="col mb-3">
               <input
                 ref={phoneNumberRef}
                 style={{ backgroundColor: "#F9F9F9" }}
                 type="text"
-                class="form-control"
+                className="form-control ll"
                 placeholder="Phone Number*"
                 aria-label="Phone Number*"
                 id="number"
@@ -142,11 +142,11 @@ const ContactUs = () => {
                 onChange={(e) => setPhoneNumber(e.target.value)}
               />
             </div>
-            <div class="col">
+            <div className="col">
               {/* <textarea name="" id="" cols="30" rows="10" style={{width: "465px", height: "140px", backgroundColor: "#F9F9F9"}} placeholder='Your message...'></textarea> */}
               <textarea
                 ref={messageRef}
-                className="form-control"
+                className="form-control lj"
                 id="exampleFormControlTextarea1"
                 cols="30"
                 rows="10"
@@ -169,7 +169,7 @@ const ContactUs = () => {
                 top: "7px",
                 left: "70px",
               }}
-              className="btn1 mt-3"
+              className="btn1 dd mt-3"
             >
               Send Message
             </motion.button>

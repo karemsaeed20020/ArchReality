@@ -184,15 +184,57 @@ input, textarea {
         left: -10px;
       }
       .btn1 {
-        transform: translate(-60%, -100%) !important;
+        transform: translate(-70%, -100%) !important;
+        width: 200px;
+        text-wrap: nowrap;
       }
+      .e {
+        
+        position: relative;
+  left: 4px;
+      }
+}
+@media (max-width: 428px) {
+  .x {
+    /* transform: translate(-19%); */
+    transform: translate(-8%);
+    max-width: 119%;
+
+  }
+  .v {
+    transform: translate(50%);
+  }
 }
 
 @media (min-width: 400px) and (max-width: 875.98px) {
     .shape {
       display: none; 
     }
-    
+    /* .hh {
+      position: relative;
+      left: 35px !important;
+    }
+    .mn {
+      position: absolute;
+      left: -25px !important;
+    }
+    .nm {
+      position: absolute;
+      left: 100px !important;
+    }
+    .ll {
+      position: absolute;
+      left: 70px !important;
+    }
+    .lj {
+      position: absolute;
+      left: -60px !important;
+    }
+    .dd {
+      width: 80% !important;
+      position: absolute;
+      left: 200px !important;
+    } */
     input[type="text"] {
         width: 150px;
         position: relative;
@@ -218,7 +260,9 @@ input, textarea {
         width: 312px;
         position: relative;
         /* left: 150px; */
-        left: 140px;
+        /* left: 140px; */
+        left: 139px;
+    width: 312px !important;
     }
     #exampleFormControlTextarea1 {
         width: 55px;
@@ -234,7 +278,10 @@ input, textarea {
         position: relative;
         left: -10px;
       }
-    
+    .form.v.align-items-center {
+      position: relative;
+      left: 270px;
+    }
   
     .talk {
       flex-direction: column-reverse; 
@@ -251,10 +298,17 @@ input, textarea {
     }
   
     .btn1 {
-      width: 100%; 
+      /* width: 100%;  */
+      width: 250px;
       left: auto;
       top: auto; 
       margin-top: 20px; 
+      margin-left: 20px;
+      text-wrap: nowrap;
+    }
+    .e {
+      position: relative;
+  left: 103px;
     }
    
   }
@@ -402,3 +456,14 @@ input, textarea {
       left: 60px;
     }
   }
+@media (max-width: 320px) {
+  .v {
+    transform: translate(-81%) !important;
+  }
+  .ll {
+    width: 280px !important;
+  }
+  .lj {
+
+  }
+}

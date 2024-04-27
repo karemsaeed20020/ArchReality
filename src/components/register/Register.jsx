@@ -104,7 +104,7 @@ const Register = () => {
         <img className="register-item" alt="" src={Rectangle1} />
         <b className="cerate-new-account">Create new account</b>
         <div className="sign-up-container sign-up-wrapper1">
-          <form onSubmit={handleSubmit}>
+          <form className="on" onSubmit={handleSubmit}>
             <div className="register-inner">
               <div className="password-parent">
                 <input

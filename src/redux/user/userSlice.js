@@ -5,8 +5,8 @@ const initialState = {
     currentUser: null,
     error: null,
     loading: false,
-    profilePage: null, // Add profilePage to store the profile page URL
-    fullName: null,
+    profilePage: '', // Add profilePage to store the profile page URL
+    fullName: '',
 };
 
 const userSlice = createSlice({

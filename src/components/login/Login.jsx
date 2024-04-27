@@ -20,12 +20,15 @@ import {
   signInSuccess,
   signInFailure,
 } from "../../redux/user/userSlice";
+import { auth } from "../../config/firebase";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import Profile from "../Profile/Profile";
 
 
 
 const Login = ({ match }) => {
   // const {setToken,setUserName}=useContext(userContext);
-  const { setToken, setFirstNamee, setLastNamee, setImage } =
+  const { setToken, setFirstNamee, setLastNamee, setImage, user } =
     useContext(userContext);
 
   const [email, setEmail] = useState("");
@@ -92,6 +95,29 @@ const Login = ({ match }) => {
         // setLoading(false); // Set loading to false when the fetch operation ends
       });
   };
+  const handleSignIn = async () => {
+    try {
+      const provider = new GoogleAuthProvider();
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      console.log("Google User:", user); // Check the Google user object
+      const userToken = await user.getIdToken();
+      setToken(userToken);
+      setFirstNamee(user.displayName.split(" ")[0]);
+      setLastNamee(user.displayName.split(" ")[1]);
+      setImage(user.photoURL);
+  
+      // Navigate to profile page
+      navigate('/profile', {
+        state: {
+          displayName: user.displayName,
+          photoURL: user.photoURL
+        }
+      });
+    } catch (error) {
+      console.error("Google Sign-in Error:", error);
+    }
+  };
   
  
 
@@ -154,15 +180,20 @@ const Login = ({ match }) => {
             )}
           </motion.button>
 
-          {error && (
-            <Alert variant="danger" className="custom-alert">
-              {error}
-            </Alert>
-          )}
+          {error && typeof error === 'string' && (
+  <Alert variant="danger" className="custom-alert">
+    {error}
+  </Alert>
+)}
         </form>
         <div className="frame-parent">
+        {user ? (
+          <Profile />
+        ) : (
+          // <GoogleButton onClick={handleSignIn} />
+        <img className="frame-child" onClick={handleSignIn} alt=""  src={Frame1} />
+        )}
         
-        <img className="frame-child" alt=""  src={Frame1} />
           <img className="frame-child" alt="" src={Frame2} />
         </div>
         <div className="log-in-with"> log in with</div>

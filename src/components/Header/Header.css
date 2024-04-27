@@ -96,3 +96,28 @@ input, textarea {
     height: 45px;
    
 }
+/* .position-relative {
+    position: relative !important;
+    left: -530px;
+} */
+/* For iPad landscape and portrait mode */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+  .position-relative {
+    left: -200px; 
+  }
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 767px) {
+  .position-relative {
+    left: -530px; 
+  }
+}
+
+
+
+
