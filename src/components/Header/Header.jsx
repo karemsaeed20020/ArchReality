@@ -27,7 +27,7 @@ const Header = () => {
           </Link>
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"
-            className="d-flex zz align-items-center justify-content-center w-25 border-0 position-relative top-0 d-md-none"
+            className="d-flex zz align-items-center justify-content-center w-25 border-0 position-relative  top-0 d-md-none"
             onClick={toggleNavbar}
           />
           <Navbar.Collapse
@@ -53,7 +53,7 @@ const Header = () => {
                 </Link>
               ) : (
                 <Link to="/login" className="nav-link text-white">
-                  logIn
+                  Log In
                 </Link>
               )}
             </Nav>

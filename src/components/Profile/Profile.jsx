@@ -118,6 +118,7 @@ const Profile = () => {
   };
   const handleLogout = () => {
     dispatch(updateStart());
+    localStorage.removeItem("token");
 
     fetch("https://arch-reality.onrender.com/api/auth/logout", {
       method: "POST",
@@ -319,7 +320,7 @@ const Profile = () => {
                         top: "-20px",
                         left: "100px",
                       }}
-                      className="mb-3"
+                      className="mb-3 ii"
                     >
                       First name
                     </Form.Label>
@@ -348,7 +349,7 @@ const Profile = () => {
                         top: "-20px",
                         left: "-90px",
                       }}
-                      className="last mb-3"
+                      className="last mb-3 iq"
                     >
                       Last name
                     </Form.Label>
@@ -377,7 +378,7 @@ const Profile = () => {
                         top: "-20px",
                         left: "100px",
                       }}
-                      className="email mb-3"
+                      className="email mb-3 ie"
                     >
                       Email
                     </Form.Label>
@@ -406,7 +407,7 @@ const Profile = () => {
                         top: "-20px",
                         left: "100px",
                       }}
-                      className="mb-3"
+                      className="mb-3 oo"
                     >
                       Old Password
                     </Form.Label>
@@ -435,7 +436,7 @@ const Profile = () => {
                         top: "-20px",
                         left: "100px",
                       }}
-                      className="mb-3"
+                      className="oo mb-3"
                     >
                       New Password
                     </Form.Label>
@@ -464,7 +465,7 @@ const Profile = () => {
                         top: "-20px",
                         left: "-120px",
                       }}
-                      className="last1 last5 mb-3"
+                      className="oa last1 last5 mb-3"
                     >
                       Confirm Password
                     </Form.Label>

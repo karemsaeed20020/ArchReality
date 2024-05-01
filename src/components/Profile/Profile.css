@@ -494,4 +494,68 @@ left: -20px;
   .fadeInUp {
     animation: fadeInUp 0.5s ease forwards;
   }
+  @media (max-width: 575.98px) { 
+    body {
+      overflow-x: hidden ;
+    }
+    /* Other styles for smaller screen sizes */
+  }
   
+  @media (min-width: 576px) {
+    body {
+      overflow-x: hidden ;
+    }
+  }
+
+@media (max-width: 570px) {
+  .ii {
+    position: relative !important;
+    left: 80px !important;
+  }
+  .iq {
+    position: relative;
+    left: -100px !important;
+  }
+  .ie {
+    position: relative;
+    left: 74px !important;
+  }
+  .oo {
+    position: relative;
+    left: 74px !important;
+  }
+  .oa {
+    position: relative;
+    left: -170px !important;
+  }
+}
+
+@media (min-width: 570px) and (max-width: 950px) {
+  .oa {
+    position: relative;
+    left: -270px !important;
+  }
+}
+/* @media (min-width: 760px) and (max-width: 950px) {
+  .oa {
+    position: relative;
+    left: -220px !important;
+  }
+  .fadeInUp {
+    transform: translate(5%) !important;
+  }
+  .lastName4 {
+    position: relative;
+    left: -83px;
+  }
+  .xz {
+    transform: none;
+  position: relative;
+  left: 190px;
+  }
+  .zx {
+    transform: none;
+  position: relative;
+  left: 190px !important;
+  }
+} */

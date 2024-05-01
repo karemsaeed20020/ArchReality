@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import { motion } from "framer-motion";
 
-
 const InfoExterior = () => {
   const [showMore, setShowMore] = useState(false);
 
@@ -21,6 +20,7 @@ const InfoExterior = () => {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 1 } },
   };
+  
 
   return (
     <>
@@ -124,6 +124,7 @@ const InfoExterior = () => {
         </div>
       </div>
       <Footer />
+      
     </>
   );
 };

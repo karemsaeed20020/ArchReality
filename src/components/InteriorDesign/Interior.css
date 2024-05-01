@@ -223,3 +223,15 @@
     border-radius: 15px !important;
   }
 }
+@media (max-width: 575.98px) { 
+  body {
+    overflow-x: hidden !important;
+  }
+  /* Other styles for smaller screen sizes */
+}
+
+@media (min-width: 576px) {
+  body {
+    overflow-x: hidden !important;
+  }
+}

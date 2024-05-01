@@ -171,7 +171,8 @@ input, textarea {
           width: 55px;
           position: relative;
             /* left: -35px; */
-            left: -12px;
+            /* left: -12px; */
+            left: -4px;
 
       }
       .form {
@@ -209,6 +210,10 @@ input, textarea {
 @media (min-width: 400px) and (max-width: 875.98px) {
     .shape {
       display: none; 
+    }
+    .dd {
+      width: 100px;
+  height: 54px;
     }
     /* .hh {
       position: relative;
@@ -332,14 +337,19 @@ input, textarea {
           left: -30px;
       }
       input[type="email"] {
-          width: 490px;
+          /* width: 490px; */
           position: relative;
           left: 20px;
+        }
+        .nm {
+        width: 375px !important;
+
       }
       #number {
-          width: 490px;
+          /* width: 490px; */
           position: relative;
           left: 20px;
+          width: 375px !important;
       }
       #exampleFormControlTextarea1 {
           width: 55px;
@@ -465,5 +475,23 @@ input, textarea {
   }
   .lj {
 
+  }
+}
+@media (max-width: 575.98px) { 
+  body {
+    overflow-x: hidden ;
+  }
+  /* Other styles for smaller screen sizes */
+}
+
+@media (min-width: 576px) {
+  body {
+    overflow-x: hidden ;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1250px) {
+  .v {
+    transform: translate(-45%) !important;
   }
 }

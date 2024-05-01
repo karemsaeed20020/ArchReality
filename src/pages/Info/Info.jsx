@@ -176,7 +176,7 @@ const Info = () => {
               right: "45px",
             }}
           >
-            <motion.button className="btn3 me-3" whileHover={{ scale: 1.1 }}
+            <motion.button className="btn3  me-3" whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}>
               {/* {showMoreInterior ? 'less' : 'more'} */}
               more

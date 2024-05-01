@@ -432,6 +432,7 @@
   .test {
     transform: translate(-160%);
   }
+  
 }
 
 @media (max-width: 391px) {
@@ -447,4 +448,19 @@
     align-items: center;
     justify-content: center;
   }
+}
+@media (max-width: 575.98px) { 
+  body {
+    overflow-x: hidden ;
+  }
+  /* Other styles for smaller screen sizes */
+}
+
+@media (min-width: 576px) {
+  body {
+    overflow-x: hidden ;
+  }
+}
+.carousel-indicators [data-bs-target] {
+  height: 10px !important;
 }

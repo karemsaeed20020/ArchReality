@@ -17,7 +17,8 @@ code {
 body {
   margin: 0;
   line-height: normal;
-  }
+  overflow-x: hidden;
+}
 :root {
   /* fonts */
   --font-josefin-sans: "Josefin Sans";
@@ -109,3 +110,23 @@ body {
   --br-116xl: 135px;
 }
 
+@media (max-width: 575.98px) { 
+  body {
+    overflow-x: hidden ;
+  }
+  
+  
+  
+  .app-container {
+    overflow-x: hidden;
+    
+  }
+  /* Other styles for smaller screen sizes */
+}
+
+@media (min-width: 576px) {
+  body {
+    overflow-x: hidden ;
+  }
+  
+}

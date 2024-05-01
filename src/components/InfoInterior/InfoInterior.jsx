@@ -107,7 +107,7 @@ const InfoInterior = () => {
             ))}
         </div>
         <div
-          className="more d-flex justify-content-center mt-3"
+          className="more sc d-flex justify-content-center mt-3"
           style={{ borderRadius: "24px" }}
         >
           <motion.button
@@ -115,7 +115,7 @@ const InfoInterior = () => {
             onClick={handleMoreExteriorClick}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="bt"
+            className="bt "
           >
             {showMore ? "Show less" : "Show more"}
           </motion.button>

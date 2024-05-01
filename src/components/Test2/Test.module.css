@@ -1,0 +1,31 @@
+/* .test {
+    background-color: #283D4F;
+    height: 100vh;
+}
+
+.curve {
+    position: relative;
+}
+
+.curve::before {
+    content: '';
+    position: absolute;
+    background-color: white;
+    width: 119px;
+    height: 524px;
+    left: 368px;
+    transform: rotate(271deg);
+    border-radius: 100%;
+    top: -29px;
+    z-index: 1;
+}
+
+.userInfo {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+} */

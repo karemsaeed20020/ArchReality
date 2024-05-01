@@ -49,7 +49,7 @@ function App() {
       ) : (
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
+          {/* <Route path="/login" element={<Login />} /> */}
           <Route path="/register" element={<Register />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/profile" element={<Profile />} />
@@ -64,10 +64,13 @@ function App() {
           <Route path="/forget-password" element={<ForgetPassword />} />
           <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/qr-code" element={<QRCode />} />
-          <Route path="/test2" element={<Test2 />} />
+          {/* <Route path="/test2" element={<Test2 />} /> */}
         </Routes>
       )}
     </div>
+    <Routes>
+      <Route path="/login" element={<Login />} />
+    </Routes>
   </BrowserRouter>
   );
 }

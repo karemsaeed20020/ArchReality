@@ -199,7 +199,7 @@ const Register = () => {
                 <motion.button
                   onClick={handleSubmit}
                   type="button"
-                  className="sign-up-button"
+                  className="sign-up-button su"
                   style={{ borderRadius: "15px" }}
                   disabled={loading}
                   whileHover={{ scale: 1.05 }}

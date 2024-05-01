@@ -295,6 +295,7 @@ input {
     /* padding: 10px; */
     min-width: 400px;
     transform: translate(-25%);
+    
   }
   .login-form {
     margin-top: 25rem;
@@ -302,6 +303,7 @@ input {
     right: 40px;
     top: 40px;
   }
+  
   .bv {
     transform: translate(30%) !important;
   }
@@ -461,3 +463,4 @@ input {
     transform: translate(-8%);
   }
 }
+

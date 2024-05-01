@@ -45,6 +45,7 @@
 
 .app-container {
   position: relative;
+  /* overflow-x: hidden; */
 }
 
 .loading-container {

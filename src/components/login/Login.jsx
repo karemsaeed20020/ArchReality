@@ -39,7 +39,15 @@ const Login = ({ match }) => {
   const dispatch = useDispatch();
   const loading = useSelector((state) => state.user.loading);
   const error = useSelector((state) => state.user.error);
-
+  useEffect(() => {
+    // Check if there's a token in local storage
+    const storedToken = localStorage.getItem("token");
+    if (storedToken) {
+      // Set the token and navigate to the profile page
+      setToken(storedToken);
+      navigate("/profile");
+    }
+  }, []);
   const handleSubmit = (e) => {
     e.preventDefault();
     // setLoading(true);
@@ -72,6 +80,7 @@ const Login = ({ match }) => {
         setLastNamee(data.lastName);
         setImage(data.picture);
         dispatch(signInSuccess(data));
+        localStorage.setItem("token", data.userToken);
 
         setTimeout(() => {
           navigate("/profile");
@@ -119,7 +128,6 @@ const Login = ({ match }) => {
     }
   };
   
- 
 
   return (
     <motion.div className="login-container">
