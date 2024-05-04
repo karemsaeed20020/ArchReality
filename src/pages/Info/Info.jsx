@@ -59,9 +59,9 @@ const Info = () => {
         animate="visible"
         variants={carouselVariants}
       >
-        <Carousel controls={false} data-bs-theme="white" style={{borderRadius: "100%"}}>
+        <Carousel  controls={false} data-bs-theme="white" style={{borderRadius: "100%", backgroundColor: "transparent !important"}}>
           <Carousel.Item>
-            <img className="d-block w-100 slider" src={Project} alt="First slide" />
+            <img className="d-block w-100 slider" src={Project} alt="First slide"  />
             <Carousel.Caption className="caption">
               <h2 className="text6 text-white">Our projects</h2>
               <p className="line6 text-white">
@@ -100,7 +100,7 @@ const Info = () => {
         <div className="details d-flex align-items-center justify-content-between ms-5 mt-1">
           <h3 className="design2">Exterior Designs</h3>
           <Link to={"/infoExterior"} style={{ textDecoration: "none" }}>
-            <motion.button className="btn3 me-5" whileHover={{ scale: 1.1 }}
+            <motion.button className="btn3 vc me-5" whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} >
               {/* {showMoreExterior ? 'less' : 'more'} */}
               more
@@ -132,7 +132,7 @@ const Info = () => {
         <div className="details d-flex align-items-center justify-content-between ms-5 mt-2">
           <h3 className="design2">Interior Designs</h3>
           <Link to={"/infoInterior"} style={{ textDecoration: "none" }}>
-            <motion.button className="btn3 me-5" whileHover={{ scale: 1.1 }}
+            <motion.button className="btn3 vc me-5" whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}>
               {/* {showMoreInterior ? 'less' : 'more'} */}
               more
@@ -176,7 +176,7 @@ const Info = () => {
               right: "45px",
             }}
           >
-            <motion.button className="btn3  me-3" whileHover={{ scale: 1.1 }}
+            <motion.button  className="btn3 vc  me-3" whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}>
               {/* {showMoreInterior ? 'less' : 'more'} */}
               more

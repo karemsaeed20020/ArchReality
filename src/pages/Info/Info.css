@@ -8,6 +8,7 @@
     width: 40px;
     height: 40px;
 } */
+
 .caption {
     position: absolute;
     text-align: left;
@@ -15,6 +16,19 @@
     top: 40%;
     width: 600px;
     
+}
+
+.carousel-inner {
+  background-color: transparent;
+  position: relative;
+  top: 8px;
+}
+.carousel-indicators {
+  /* padding: 5px !important; */
+  gap: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .text6 {
@@ -98,11 +112,11 @@
     width: 119px;
     height: 43px;
     border-radius: 30px;
-    color: #858585;
+    color: #858585 ;
     font-size: 18px;
     font-weight: 700;
     line-height: 28px;
-    background-color: #D8D8D8;
+    background-color: #EAEAEA;
     padding: 4px 16px 4px 16px;
     border: none;
     outline: none;
@@ -146,12 +160,29 @@
     font-weight: 500;
     color: #A7A6A6;
   }
+  .vc {
+    width: 99px !important;
+    height: 36px !important;
+    color: #858585 !important;
+    background-color: #EAEAEA !important;
+    position: relative;
+    left: 5px;
+  }
+  
   @media (max-width: 575.98px) { 
     .interior-exterior-toggle-wrapper {
       /* width: 50px; */
       position: relative;
       right: 120px;
       padding: 10px;
+    }
+    .vc {
+      position: relative;
+      left: 45px;
+    }
+    .carousel-indicators {
+      position: relative;
+      left: -50px !important;
     }
     .interior-exterior-toggle {
       /* position: relative; */
@@ -165,6 +196,7 @@
       left: -45px;
       
     }
+   
     .elegance-redefined-showcasing-wrapper {
       max-width: 400px;
       position: relative;
@@ -335,6 +367,9 @@
       left: 140px;
       top: 20px
     }
+    /* .card-img-top {
+      width: 22rem !important;
+    } */
     .line6 {
       font-size: 4.0vw; 
       line-height: 4.5vw; 

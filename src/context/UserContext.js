@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
-import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../config/firebase";
+// import { onAuthStateChanged } from "firebase/auth";
+// import { auth } from "../config/firebase";
 
 export const userContext=createContext();
 export default function UserProvider({children}){
@@ -13,22 +13,22 @@ export default function UserProvider({children}){
 
 
   useEffect(() => console.log(token), [token]);
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        // Update profile information from Google user object
-        setFirstNamee(user.displayName.split(" ")[0]);
-        setLastNamee(user.displayName.split(" ")[1]);
-        setImage(user.photoURL);
-      } else {
-        // Reset profile information if user is not authenticated
-        setFirstNamee(null);
-        setLastNamee(null);
-        setImage(null);
-      }
-    });
-    return () => unsubscribe();
-  }, []);
+  // useEffect(() => {
+  //   const unsubscribe = onAuthStateChanged(auth, (user) => {
+  //     if (user) {
+  //       // Update profile information from Google user object
+  //       setFirstNamee(user.displayName.split(" ")[0]);
+  //       setLastNamee(user.displayName.split(" ")[1]);
+  //       setImage(user.photoURL);
+  //     } else {
+  //       // Reset profile information if user is not authenticated
+  //       setFirstNamee(null);
+  //       setLastNamee(null);
+  //       setImage(null);
+  //     }
+  //   });
+  //   return () => unsubscribe();
+  // }, []);
   
   const fullName = `${firstNamee} ${lastNamee}`;
     

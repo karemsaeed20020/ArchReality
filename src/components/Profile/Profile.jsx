@@ -42,8 +42,8 @@ const Profile = () => {
   } = useContext(userContext);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const location = useLocation();
-  const { displayName, photoURL } = location.state || {};
+  // const location = useLocation();
+  // const { displayName, photoURL } = location.state || {};
   useEffect(() => {
     if (!token) {
       navigate("/login");
@@ -57,6 +57,7 @@ const Profile = () => {
     // Set up headers and data
     const headers = {
       Authorization: "graduation " + token,
+      
     };
 
     const formData = new FormData();
@@ -119,6 +120,7 @@ const Profile = () => {
   const handleLogout = () => {
     dispatch(updateStart());
     localStorage.removeItem("token");
+    
 
     fetch("https://arch-reality.onrender.com/api/auth/logout", {
       method: "POST",
@@ -253,15 +255,11 @@ const Profile = () => {
                 </div>
               ) : (
                 <>
-                  {/* <img className="prof" src={profilePage || 'default_profile_image_url'} alt="Profile" style={{boxShadow: "-20px -20px 50px rgba(168, 198, 234, 0.8), 20px 20px 50px rgba(168, 198, 234, 0.8)", backgroundColor: 'transparent', borderRadius: "50%", objectFit: "cover"}} />
-        <img className="prof" src={photoURL || 'default_profile_image_url'} alt="Profile" style={{boxShadow: "-20px -20px 50px rgba(168, 198, 234, 0.8), 20px 20px 50px rgba(168, 198, 234, 0.8)", backgroundColor: 'transparent', borderRadius: "50%", objectFit: "cover"}} /> */}
-                  <img
+                  <img className="prof" src={profilePage || 'default_profile_image_url'} alt="Profile" style={{boxShadow: "-20px -20px 50px rgba(168, 198, 234, 0.8), 20px 20px 50px rgba(168, 198, 234, 0.8)", backgroundColor: 'transparent', borderRadius: "50%", objectFit: "cover"}} />
+                  {/* <img className="prof" src={photoURL || 'default_profile_image_url'} alt="Profile" style={{boxShadow: "-20px -20px 50px rgba(168, 198, 234, 0.8), 20px 20px 50px rgba(168, 198, 234, 0.8)", backgroundColor: 'transparent', borderRadius: "50%", objectFit: "cover"}} /> */}
+                  {/* <img
                     className="prof"
-                    src={
-                      photoURL
-                        ? photoURL
-                        : profilePage || "default_profile_image_url"
-                    }
+                    src={photoURL ? photoURL : profilePage || "default_profile_image_url"}
                     alt="Profile"
                     style={{
                       boxShadow:
@@ -270,7 +268,7 @@ const Profile = () => {
                       borderRadius: "50%",
                       objectFit: "cover",
                     }}
-                  />
+                  /> */}
                 </>
               )}
               <input
@@ -290,9 +288,10 @@ const Profile = () => {
                   <>
                     {/* <span className="name">{fullNamee}</span>
                 <span className="name">{displayName}</span> */}
-                    <span className="name">
+                <span className="name">{fullNamee}</span>
+                    {/* <span className="name">
                       {photoURL ? displayName : fullNamee}
-                    </span>
+                    </span> */}
 
                     <span
                       className="info2"

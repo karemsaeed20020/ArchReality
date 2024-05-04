@@ -109,6 +109,15 @@ body {
   --br-mini: 15px;
   --br-116xl: 135px;
 }
+.loading-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 450%);
+}
 
 @media (max-width: 575.98px) { 
   body {
@@ -127,6 +136,9 @@ body {
 @media (min-width: 576px) {
   body {
     overflow-x: hidden ;
+  }
+  .app-container {
+    overflow-x: hidden;
   }
   
 }

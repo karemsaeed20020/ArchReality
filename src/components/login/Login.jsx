@@ -20,9 +20,9 @@ import {
   signInSuccess,
   signInFailure,
 } from "../../redux/user/userSlice";
-import { auth } from "../../config/firebase";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import Profile from "../Profile/Profile";
+// import { auth } from "../../config/firebase";
+// import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+// import Profile from "../Profile/Profile";
 
 
 
@@ -104,29 +104,30 @@ const Login = ({ match }) => {
         // setLoading(false); // Set loading to false when the fetch operation ends
       });
   };
-  const handleSignIn = async () => {
-    try {
-      const provider = new GoogleAuthProvider();
-      const result = await signInWithPopup(auth, provider);
-      const user = result.user;
-      console.log("Google User:", user); // Check the Google user object
-      const userToken = await user.getIdToken();
-      setToken(userToken);
-      setFirstNamee(user.displayName.split(" ")[0]);
-      setLastNamee(user.displayName.split(" ")[1]);
-      setImage(user.photoURL);
+  // const handleSignIn = async () => {
+  //   try {
+  //     const provider = new GoogleAuthProvider();
+  //     const result = await signInWithPopup(auth, provider);
+  //     const user = result.user;
+  //     console.log("Google User:", user); // Check the Google user object
+  //     const userToken = await user.getIdToken();
+      
+  //     setToken(userToken);
+  //     setFirstNamee(user.displayName.split(" ")[0]);
+  //     setLastNamee(user.displayName.split(" ")[1]);
+  //     setImage(user.photoURL);
   
-      // Navigate to profile page
-      navigate('/profile', {
-        state: {
-          displayName: user.displayName,
-          photoURL: user.photoURL
-        }
-      });
-    } catch (error) {
-      console.error("Google Sign-in Error:", error);
-    }
-  };
+  //     // Navigate to profile page
+  //     navigate('/profile', {
+  //       state: {
+  //         displayName: user.displayName,
+  //         photoURL: user.photoURL
+  //       }
+  //     });
+  //   } catch (error) {
+  //     console.error("Google Sign-in Error:", error);
+  //   }
+  // };
   
 
   return (
@@ -195,13 +196,13 @@ const Login = ({ match }) => {
 )}
         </form>
         <div className="frame-parent">
-        {user ? (
+        {/* {user ? (
           <Profile />
         ) : (
           // <GoogleButton onClick={handleSignIn} />
         <img className="frame-child" onClick={handleSignIn} alt=""  src={Frame1} />
-        )}
-        
+        )} */}
+          <img className="frame-child"  alt=""  src={Frame1} />
           <img className="frame-child" alt="" src={Frame2} />
         </div>
         <div className="log-in-with"> log in with</div>

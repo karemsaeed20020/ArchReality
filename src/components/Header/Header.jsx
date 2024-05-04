@@ -21,7 +21,7 @@ const Header = () => {
       >
         <Container fluid>
           <Link to={"/"} style={{ textDecoration: "none" }}>
-            <Navbar.Brand href="#" className="font-weight-bold mx-5 ">
+            <Navbar.Brand href="#" className="font-weight-bold fw-bold mx-5 ">
               ARCREALITY
             </Navbar.Brand>
           </Link>
@@ -34,11 +34,11 @@ const Header = () => {
             id="responsive-navbar-nav"
             className={isOpen ? "show" : ""}
           >
-            <Nav className="links mx-auto me-5">
+            <Nav className="links mx-auto me-5 fw-bold">
               <Link to="/" className="nav-link text-white">
                 Home
               </Link>
-              <Link to="/gallery" className="nav-link text-white">
+              <Link to="/info" className="nav-link text-white">
                 Gallery
               </Link>
               <Link to="/contact" className="nav-link text-white">
