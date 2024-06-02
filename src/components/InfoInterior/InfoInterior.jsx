@@ -4,7 +4,7 @@ import Header from "../Header/Header";
 import { Card, Carousel } from "react-bootstrap";
 import Vector from "../../assets/mdi_favourite-border.png";
 import Project2 from "../../assets/video 1 1 (11).png";
-import { allDetails2, details } from "../../data/data";
+import { allDetails2, details, interior } from "../../data/data";
 import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import { motion } from "framer-motion";
@@ -81,8 +81,8 @@ const InfoInterior = () => {
           </Link>
         </div>
         <div className="row mx-3">
-          {allDetails2
-            .slice(0, showMore ? allDetails.length : 6)
+          {interior
+            .slice(4, showMore ? interior.length : 13)
             .map((detail1, i) => (
               <motion.div className="col-lg-4 col-md-6 mb-3" key={i} initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}

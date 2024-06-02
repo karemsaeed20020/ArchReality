@@ -190,11 +190,15 @@ const Register = () => {
                   onClick={togglePasswordVisibility}
                 />
               </div>
+              
             </div>
+            
             <div className="sign-up-wrapper">
               {/* <button type="submit" className="sign-up-button">
                 Sign up
               </button> */}
+              
+              
               <Link to={"/login"} style={{ textDecoration: "none" }}>
                 <motion.button
                   onClick={handleSubmit}
@@ -221,21 +225,27 @@ const Register = () => {
                   )}
                 </motion.button>
               </Link>
+              <span className="already1">Have an account ? <Link to={'/login'}>Login</Link></span>
             </div>
           </form>
         </div>
-        <div className="frame1-parent frame2-parent">
+        
+        {/* <div className="frame1-parent frame2-parent">
           <img className="frame-child" alt="" src={Frame1} />
           <img className="frame-child" alt="" src={Frame2} />
         </div>
+          
         <div className="sign1-up-with sign2-up"> Sign up with</div>
         <img className="vector1-icon vector2-icon" alt="" src={Vector2} />
         <img className="vec-child1 vec2" alt="" src={Vector3} />
         <div className="or1-wrapper or2">
           <div className="or1">OR</div>
-        </div>
+        </div> */}
+        
       </div>
+      
     </motion.div>
+    
   );
 };
 

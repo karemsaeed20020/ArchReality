@@ -7,6 +7,7 @@ const initialState = {
     loading: false,
     profilePage: '', // Add profilePage to store the profile page URL
     fullName: '',
+    profilePage1: ''
 };
 
 const userSlice = createSlice({
@@ -42,6 +43,7 @@ const userSlice = createSlice({
         },
         updateProfilePage: (state, action) => {
             state.profilePage = action.payload;
+            state.profilePage1 = action.payload;
           },
       
           // Action to update full name

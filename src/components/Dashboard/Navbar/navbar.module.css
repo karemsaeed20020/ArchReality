@@ -1,0 +1,15 @@
+nav {
+    background-color: #F8EDD9;
+}
+.address {
+    font-size: 28px ;
+}
+@media (max-width: 768px) {
+    .n {
+
+        display: contents !important;
+    }
+    .address {
+        display: none;
+    }
+}

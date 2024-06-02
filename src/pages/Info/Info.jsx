@@ -6,7 +6,7 @@ import Project from "../../assets/video 1 1 (9).png";
 import Project1 from "../../assets/video 1 1 (10).png";
 import Project2 from "../../assets/video 1 1 (11).png";
 import { Card, Col, Row } from "react-bootstrap";
-import { ar, details, details1 } from "../../data/data";
+import { ar, details, details1, exterior, interior } from "../../data/data";
 import { Link } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import { motion  } from "framer-motion";
@@ -109,7 +109,7 @@ const Info = () => {
         </div>
 
         <div className="row  mx-3">
-          {details1.slice(1, 4).map((detail1, i) => (
+          {exterior.slice(1, 4).map((detail1, i) => (
             <motion.div className="col-lg-4 ce col-md-6 mb-4" key={i} initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: i * 0.1 }}>
@@ -142,7 +142,7 @@ const Info = () => {
 
         <div className="row mx-3">
           {/* Render details based on showMore state */}
-          {allDetails
+          {interior
             .slice(0, showMore ? allDetails.length : 3)
             .map((detail, i) => (
               <motion.div className="col-lg-4 col-md-6 mb-3" key={i} initial={{ opacity: 0, y: 100 }}
@@ -153,6 +153,7 @@ const Info = () => {
                     variant="top"
                     src={detail.image}
                     className="cardImage"
+                    style={{borderRadius: "15px"}}
                   />
                   <Card.Body>
                     <Card.Title className="cardTitle">

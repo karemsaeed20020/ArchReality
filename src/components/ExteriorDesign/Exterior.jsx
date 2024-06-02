@@ -1,7 +1,7 @@
 import { Card } from "react-bootstrap";
 import Header from "../Header/Header";
 import "./Exterior.css";
-import { details1 } from "../../data/data";
+import { details1, exteriorFav } from "../../data/data";
 import { useState } from "react";
 import Footer from "../Footer/Footer";
 import { motion } from "framer-motion";
@@ -56,7 +56,7 @@ const Exterior = () => {
           transition={{ duration: 0.5 }}
           className="row mx-3"
         >
-          {allDetails
+          {exteriorFav
             .slice(0, showMore ? allDetails.length : 6)
             .map((detail1, i) => (
               <div className="col-lg-4 col-md-6 mb-3" key={i}>

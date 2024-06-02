@@ -4,13 +4,14 @@ import Header from "../Header/Header";
 import { Card, Carousel } from "react-bootstrap";
 import Vector from "../../assets/mdi_favourite-border.png";
 import Project1 from "../../assets/video 1 1 (10).png";
-import { details1 } from "../../data/data";
+import { details1, exterior } from "../../data/data";
 import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import { motion } from "framer-motion";
 
 const InfoExterior = () => {
   const [showMore, setShowMore] = useState(false);
+  
 
   const handleMoreExteriorClick = () => {
     setShowMore(!showMore);
@@ -78,13 +79,14 @@ const InfoExterior = () => {
                 src={Vector}
                 alt=""
                 style={{ width: "26px", height: "24px" }}
+                className="hover:text-red"
               />
             </motion.button>
           </Link>
         </div>
         <div className="row mx-3">
-          {allDetails
-            .slice(0, showMore ? allDetails.length : 6)
+          {exterior
+            .slice(4, showMore ? exterior.length : 13)
             .map((detail1, i) => (
               <motion.div className="col-lg-4 col-md-6 mb-3" key={i} initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}

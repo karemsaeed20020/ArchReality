@@ -112,7 +112,7 @@
 .appear {
     margin-top: 50px;
     background-color: #283D4F;
-    height: 100vh;
+    height: 105vh;
 }
 .user2 {
     margin-top: 80px;
@@ -535,7 +535,23 @@ left: -20px;
     position: relative;
     left: -270px !important;
   }
+  /* .vh {
+    transform: translate(25%, 3%) !important;
+  }
+  .lastName1 {
+    width: 300px !important;
+  }
+  .c {
+    width: 641px;
+  }
+  .Name6 {
+    transform: translate(22%);
+  }
+  .im {
+    transform: translate(28%, 0px) !important;
+  } */
 }
+
 /* @media (min-width: 760px) and (max-width: 950px) {
   .oa {
     position: relative;
@@ -559,3 +575,31 @@ left: -20px;
   left: 190px !important;
   }
 } */
+
+@media (min-width: 820px) and (max-width: 825px) {
+  .vh {
+    transform: translate(26%, 2%) !important;
+  }
+  .rt {
+    position: relative;
+    left: 150px !important;
+  }
+  .vh {
+    transform: translate(25%, 3%) !important;
+  }
+  .lastName1 {
+    width: 300px !important;
+  }
+  .c {
+    width: 641px;
+  }
+  .Name6 {
+    transform: translate(22%);
+  }
+  .im {
+    transform: translate(28%, 0px) !important;
+  }
+}
+.vh {
+  padding: 30px;
+}

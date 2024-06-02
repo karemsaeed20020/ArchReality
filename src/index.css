@@ -49,6 +49,7 @@ body {
 body {
   margin: 0;
   line-height: normal;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 :root {
   /* fonts */
@@ -109,7 +110,7 @@ body {
   --br-mini: 15px;
   --br-116xl: 135px;
 }
-.loading-container {
+/* .loading-container {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -117,28 +118,35 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, 450%);
-}
+} */
 
+.loading-container {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  position: relative !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -10%) !important;
+  height: 100vh !important;
+  width: 100% !important;
+  
+  
+}
+.app-container {
+  max-height: 100vh; /* Limit container height to viewport height */
+  overflow-y: auto; /* Enable vertical scrolling when content exceeds viewport height */
+  overflow-x: hidden;
+}
 @media (max-width: 575.98px) { 
-  body {
-    overflow-x: hidden ;
-  }
-  
-  
-  
   .app-container {
-    overflow-x: hidden;
-    
+    overflow-y: auto; /* Enable vertical scrolling for smaller screens */
   }
-  /* Other styles for smaller screen sizes */
 }
 
+/* Additional styles for larger screens */
 @media (min-width: 576px) {
-  body {
-    overflow-x: hidden ;
-  }
   .app-container {
-    overflow-x: hidden;
+    overflow-y: auto; /* Enable vertical scrolling for larger screens if needed */
   }
-  
 }

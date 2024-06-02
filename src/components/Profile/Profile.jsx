@@ -305,7 +305,7 @@ const Profile = () => {
               <div className="ellipse-1135"></div>
             </div>
             <Form
-              className="form11 fadeInUp"
+              className="form1 fadeInUp"
               onSubmit={(e) => {
                 e.preventDefault();
               }}
@@ -370,7 +370,7 @@ const Profile = () => {
                   </Form.Group>
                 </Col>
                 <Col xs={10} md={12} className="email1 mx-md-5">
-                  <Form.Group>
+                  <Form.Group className="c">
                     <Form.Label
                       style={{
                         position: "relative",
@@ -457,7 +457,7 @@ const Profile = () => {
                   </Form.Group>
                 </Col>
                 <Col xs={10} sm={12} md={6} className="g-lg-3">
-                  <Form.Group className="ms-sm-5 Name5">
+                  <Form.Group  className="ms-sm-5 Name5 Name6">
                     <Form.Label
                       style={{
                         position: "relative",
@@ -470,7 +470,7 @@ const Profile = () => {
                     </Form.Label>
                     <Form.Control
                       type="password"
-                      placeholder=""
+                      placeholder="Confirm Password"
                       className="lastName2 lastName4"
                       value={cPassword}
                       onChange={(e) => setCPassword(e.target.value)}

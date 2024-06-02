@@ -1,0 +1,98 @@
+/* .sa {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    margin: 10px;
+    color: white;
+}
+.linkText {
+    font-size: 22px;
+    color: #A8C6EA;
+} */
+.container10 {
+    display: flex;
+    width: 250px;
+    height: 100vh;
+    gap: 20px;
+    padding: 15px;
+    
+}
+
+.sidebar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 7px;
+    padding-bottom: 10px;
+    gap: 20px;
+    
+   
+    
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #adb5bd;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.link:hover {
+   
+    color: #fff;
+}
+
+.activeLink {
+    background-color: #495057;
+    color: #fff;
+}
+
+.sa {
+    display: flex;
+    align-items: center;
+}
+
+.linkText {
+    margin-left: 10px;
+    font-size: 22px;
+}
+
+.subLinkText {
+    margin-left: 20px;
+    color: #A8C6EA;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.subLinkText:hover {
+    color: #fff;
+}
+
+/* Ensure active state color remains without hover */
+.link {
+    color: #A8C6EA;
+}
+
+.activeLink {
+    background-color: #495057;
+    color: #fff;
+}
+
+.subLinkText {
+    color: #adb5bd;
+}
+
+.subLinkText.activeLink {
+    background-color: #495057;
+    color: #fff;
+}
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        left: 80px;
+    }
+}

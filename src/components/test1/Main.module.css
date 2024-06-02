@@ -1,0 +1,178 @@
+/* .main {
+    padding: 20px;
+  }
+  
+  .header {
+    text-align: center;
+  }
+  
+  .section {
+    padding: 5rem 0;
+  }
+  
+  .bgLight {
+    background-color: #f8f9fa;
+  }
+  
+  .textCenter {
+    text-align: center;
+  }
+  
+  .imgFluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .imgCircle {
+    border-radius: 50%;
+  }
+  
+  .leadText {
+    color: #6c757d;
+  }
+  
+  .btnPrimary {
+    background-color: #007bff;
+    border: none;
+  }
+  
+  .btnPrimary:hover {
+    background-color: #0056b3;
+  }
+   */
+   /* src/components/About.module.css */
+/* src/components/About.module.css */
+/* Main.module.css */
+.header {
+  background: url('../../assets/pexels-blitzboy-966397.jpg') no-repeat center center, #000;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 50px 0;
+  height: 70vh;
+  object-fit: cover;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  margin-top: 100px;
+}
+
+.leadText {
+  color: #fff; /* Ensure text is readable */
+}
+
+.btnPrimary {
+  background-color: #283D4F !important;
+  border-color: #283D4F !important;
+  color: white !important;
+  text-wrap: nowrap !important;
+  width: 160px !important;
+}
+
+.btnPrimary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
+.bgLight {
+  background-color: #f8f9fa; /* Optional: You can remove this if you don't want a background color */
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.imgFluid11, .imgFluid12 {
+  width: 600px !important;
+  height: 400px !important;
+  max-width: 100%;
+  height: auto;
+  border-radius: 41px !important;
+}
+
+.imgCircle {
+  border-radius: 50%;
+}
+
+.leadText {
+  color: #6c757d;
+}
+
+.btnPrimary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btnPrimary:hover {
+  background-color: #0056b3;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .header {
+    height: auto;
+    padding: 30px 0;
+  }
+
+  .container {
+    margin-top: 0;
+    left: 18px;
+  }
+
+  .leadText {
+    font-size: 1rem;
+  }
+
+  .btnPrimary {
+    padding: 10px 20px;
+    width: auto;
+  }
+
+  .my-4 {
+    margin: 2rem 0;
+  }
+
+  .imgFluid11, .imgFluid12 {
+    width: 100% !important;
+    height: auto !important;
+    margin-top: 10px;
+  }
+  .pa {
+    /* padding: 34px 25px; */
+    padding: 79px 34px;
+  }
+  .video {
+    display: block !important;
+  width: 2150px !important;
+  height: 60px !important;
+  margin-bottom: none;
+  }
+ 
+}
+.img-fluid {
+  max-width: 100%;
+  height: none;
+  transform: translate(-2%, -8%);
+}
+
+.imgFluid2 {
+  
+  width: 200px;
+  height: auto;
+  padding: 20px;
+  border-radius: 219px;
+  border-radius: 41px !important;
+}
+.video {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 10px;
+  
+}
+
+.imgCircle {
+  border-radius: 15px;
+}

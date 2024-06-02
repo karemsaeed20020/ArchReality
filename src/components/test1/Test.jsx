@@ -530,89 +530,382 @@
 // export default Profile;
 
 
-import React, { useState } from 'react'
-// import Test1 from '../../assets/main.png';
-// import Test1 from '../../assets/real-estate-6688945_1280.jpg';
-import Test1 from '../../assets/brutalism-7880446_1280.jpg';
-import './Test.css';
-import { Button, Col, Container, Form, Row } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import OtpInput from '../OTP/OtpInput';
+// import React, { useState } from 'react'
+// // import Test1 from '../../assets/main.png';
+// // import Test1 from '../../assets/real-estate-6688945_1280.jpg';
+// import Test1 from '../../assets/brutalism-7880446_1280.jpg';
+// import './Test.css';
+// import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+// import { Link, useNavigate } from 'react-router-dom';
+// import axios from 'axios';
+// import OtpInput from '../OTP/OtpInput';
 
-const Test = () => {
-  const [email, setEmail] = useState("");
-  const navigate = useNavigate()
+// const Test = () => {
+//   const [email, setEmail] = useState("");
+//   const navigate = useNavigate()
   
-  const [emailSubmitted, setEmailSubmitted] = useState(false);
+//   const [emailSubmitted, setEmailSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Here you can add logic to handle the password reset process
-    // For this example, we'll just set submitted to true
-    console.log(email)
-        axios.post('https://arch-reality.onrender.com/api/auth/forget',
-            {
-                email: email,
-            })
-            .then(res => {
-                console.log(res.data)
-                if (res.status === 200) {
-                    setEmailSubmitted(true);
-                    navigate('/otp')
-                } else {
-                    alert('Email / Server Error.')
-                }
-            }).catch(err => {
-                console.log(err)
-            })
-  };
-  return (
-    // <div class="container pt-5 w-full">
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     // Here you can add logic to handle the password reset process
+//     // For this example, we'll just set submitted to true
+//     console.log(email)
+//         axios.post('https://arch-reality.onrender.com/api/auth/forget',
+//             {
+//                 email: email,
+//             })
+//             .then(res => {
+//                 console.log(res.data)
+//                 if (res.status === 200) {
+//                     setEmailSubmitted(true);
+//                     navigate('/otp')
+//                 } else {
+//                     alert('Email / Server Error.')
+//                 }
+//             }).catch(err => {
+//                 console.log(err)
+//             })
+//   };
+//   return (
+//     // <div class="container pt-5 w-full">
       
-    //     <div class="row">
-    //         <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
-    //             <img src={Test1} alt="Main IMG" class="img-fluid" />
-    //         </div>
-    //         <div class="col-12 col-sm-12 col-md-12 col-lg-6 pt-5">
-    //             <h2 class="main-text pt-5 mt-5">Forgot <br /> Your Password</h2>
-    //             <input type="e-mail" placeholder="Enter Your E-mail" class="form-control main-input mt-5" />
-    //             <div class="row">
-    //                 <div class="col-3">
-    //                     <button class="btn btn-sz-primary mt-5">Reset</button>
-    //                 </div>
-    //                 <div class="col-6 pt-5">
-    //                     <a href="#" class="back-to-login">Back To Login</a>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     </div>
-    // </div>
-//     <div class="container pt-5">
-//     <div class="row align-items-center">
-//         <div class="col-lg-6 order-lg-1 order-2 text-center">
-//             <img src={Test1} alt="Main IMG" class="img-fluid appear bottom" />
-//         </div>
-//         <div class="col-lg-6 order-lg-2 order-1 pt-5">
-//             <h2 class="main-text pt-5 mt-5">Forgot <br /> Your Password</h2>
-//             <input type="email" placeholder="Enter Your E-mail" class="form-control main-input mt-5" />
-//             <div class="row">
-//                 <div class="col-6 col-md-4 col-lg-6">
-//                     <button class="btn btn-sz-primary mt-5">Reset</button>
-//                 </div>
-//                 <div class="col-6 col-md-8 col-lg-6 pt-5">
-//                     <a href="#" class="back-to-login">Back To Login</a>
-//                 </div>
-//             </div>
-//         </div>
-//     </div>
-// </div>
-<>
- <h1>Test</h1>
-</>
+//     //     <div class="row">
+//     //         <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
+//     //             <img src={Test1} alt="Main IMG" class="img-fluid" />
+//     //         </div>
+//     //         <div class="col-12 col-sm-12 col-md-12 col-lg-6 pt-5">
+//     //             <h2 class="main-text pt-5 mt-5">Forgot <br /> Your Password</h2>
+//     //             <input type="e-mail" placeholder="Enter Your E-mail" class="form-control main-input mt-5" />
+//     //             <div class="row">
+//     //                 <div class="col-3">
+//     //                     <button class="btn btn-sz-primary mt-5">Reset</button>
+//     //                 </div>
+//     //                 <div class="col-6 pt-5">
+//     //                     <a href="#" class="back-to-login">Back To Login</a>
+//     //                 </div>
+//     //             </div>
+//     //         </div>
+//     //     </div>
+//     // </div>
+// //     <div class="container pt-5">
+// //     <div class="row align-items-center">
+// //         <div class="col-lg-6 order-lg-1 order-2 text-center">
+// //             <img src={Test1} alt="Main IMG" class="img-fluid appear bottom" />
+// //         </div>
+// //         <div class="col-lg-6 order-lg-2 order-1 pt-5">
+// //             <h2 class="main-text pt-5 mt-5">Forgot <br /> Your Password</h2>
+// //             <input type="email" placeholder="Enter Your E-mail" class="form-control main-input mt-5" />
+// //             <div class="row">
+// //                 <div class="col-6 col-md-4 col-lg-6">
+// //                     <button class="btn btn-sz-primary mt-5">Reset</button>
+// //                 </div>
+// //                 <div class="col-6 col-md-8 col-lg-6 pt-5">
+// //                     <a href="#" class="back-to-login">Back To Login</a>
+// //                 </div>
+// //             </div>
+// //         </div>
+// //     </div>
+// // </div>
+
 
     
-)
-}
+// )
+// }
 
-export default Test
+// export default Test
+
+
+
+// import React from 'react';
+// import styles from './Main.module.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import Header from '../Header/Header';
+
+// const Test = () => {
+//     return (
+//         <>
+//         <Header />
+//         <main className={styles.main}>
+      
+
+//       <section className={`py-5 ${styles.section} ${styles.bgLight}`} id="scroll-target">
+//         <div className="container px-5 my-5">
+//           <div className="row gx-5 align-items-center">
+//             <div className="col-lg-6">
+//               <img
+//                 className={`img-fluid rounded mb-5 mb-lg-0 ${styles.imgFluid}`}
+//                 src="/assets/founding.jpg"
+//                 alt="Founding"
+//               />
+//             </div>
+//             <div className="col-lg-6">
+//               <h2 className="fw-bolder">Our Founding</h2>
+//               <p className={`lead fw-normal mb-0 ${styles.leadText}`}>
+//                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+//                 est, ut esse a labore aliquam beatae expedita. Blanditiis
+//                 impedit numquam libero molestiae et fugit cupiditate, quibusdam
+//                 expedita, maiores eaque quisquam.
+//               </p>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       <section className={`py-5 ${styles.section}`}>
+//         <div className="container px-5 my-5">
+//           <div className="row gx-5 align-items-center">
+//             <div className="col-lg-6 order-first order-lg-last">
+//               <img
+//                 className={`img-fluid rounded mb-5 mb-lg-0 ${styles.imgFluid}`}
+//                 src="/assets/growth.jpg"
+//                 alt="Growth"
+//               />
+//             </div>
+//             <div className="col-lg-6">
+//               <h2 className="fw-bolder">Growth &amp; Beyond</h2>
+//               <p className={`lead fw-normal mb-0 ${styles.leadText}`}>
+//                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+//                 est, ut esse a labore aliquam beatae expedita. Blanditiis
+//                 impedit numquam libero molestiae et fugit cupiditate, quibusdam
+//                 expedita, maiores eaque quisquam.
+//               </p>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       <section className={`py-5 ${styles.section} ${styles.bgLight}`}>
+//         <div className="container px-5 my-5">
+//           <div className={`text-center ${styles.textCenter}`}>
+//             <h2 className="fw-bolder">Our Team</h2>
+//             <p className={`lead fw-normal mb-5 ${styles.leadText}`}>
+//               Dedicated to quality and your success
+//             </p>
+//           </div>
+//           <div className="row gx-5 row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center">
+//             {[
+//               { name: 'Ibbie Eckart', role: 'Founder & CEO', img: '/assets/icons/person1.png' },
+//               { name: 'Arden Vasek', role: 'CFO', img: '/assets/icons/person2.png' },
+//               { name: 'Toribio Nerthus', role: 'Operations Manager', img: '/assets/icons/person3.png' },
+//               { name: 'Malvina Cilla', role: 'CTO', img: '/assets/icons/person4.png' },
+//             ].map((member, index) => (
+//               <div key={index} className="col mb-5">
+//                 <div className="text-center">
+//                   <img
+//                     className={`img-fluid rounded-circle mb-4 px-4 ${styles.imgCircle}`}
+//                     src={member.img}
+//                     alt={member.name}
+//                   />
+//                   <h5 className="fw-bolder">{member.name}</h5>
+//                   <div className={`fst-italic ${styles.leadText}`}>{member.role}</div>
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
+//     </main>  
+//     </>
+//     );
+// };
+
+// export default Test;
+
+// src/components/About.js
+import React from 'react';
+import { Container, Row, Col, Card } from 'react-bootstrap';
+import { motion } from 'framer-motion';
+import styles from './Main.module.css'; // Import CSS module
+import Header from '../Header/Header';
+import Company from '../../assets/Group 1481.png';
+import Team from '../../assets/Rectangle 802.png';
+import Person1 from '../../assets/pexels-spencer-selover-142259-775358.jpg';
+import Person2 from '../../assets/pexels-simon-robben-55958-614810.jpg';
+import Person3 from '../../assets/pexels-danxavier-1121796.jpg';
+import Person4 from '../../assets/pexels-lucasallmann-442559.jpg';
+import Footer from '../Footer/Footer';
+
+const Test = () => {
+    return (
+        <>
+        <Header />
+        <main className={styles.main}>
+          <header className={`py-4 ${styles.header}`}>
+            <div className={styles.container}>
+              <div className="row justify-content-center">
+                <div className="col-lg-8 col-md-10">
+                {/* padding: 34px 25px; */}
+                  <motion.div
+                    className={`${styles.pa} "my-5 mt-sm-5"`}
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                  >
+                    <h1 className="fw-bolder mb-3 text-black mt-5">
+                      Our mission is to make Archreality websites easier for everyone.
+                    </h1>
+                    <p className={`lead fw-normal mb-4 ${styles.leadText}`}>
+                      Real estate encompasses the land, plus any permanent man-made additions, such as houses and other buildings. Any additions or changes to the land that affects the property's value are called an improvement.
+                    </p>
+                    <a className={`btn btn-lg ${styles.btnPrimary}`} href="#scroll-target">
+                      Read our story
+                    </a>
+                  </motion.div>
+                </div>
+              </div>
+            </div>
+          </header>
+
+          <section className={`py-4 bg-light ${styles.section1}`} id="scroll-target">
+            <div className={styles.container}>
+              <div className="row align-items-center">
+                <div className="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                  <motion.img
+                    className={`img-fluid3 rounded ${styles.imgFluid11}`}
+                    src={Company}
+                    alt="Founding"
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1 }}
+                  />
+                </div>
+                <div className="col-lg-6 col-md-12">
+                  <motion.div
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1 }}
+                  >
+                    <h2 className="fw-bolder">Our Company</h2>
+                    <p className={`lead fw-normal text-black mb-0 ${styles.leadText}`}>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                      est, ut esse a labore aliquam beatae expedita. Blanditiis
+                      impedit numquam libero molestiae et fugit cupiditate, quibusdam
+                      expedita, maiores eaque quisquam.
+                    </p>
+                  </motion.div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className={`py-4 bg-white ${styles.section}`}>
+            <div className={styles.container}>
+              <div className="row align-items-center">
+                <div className="col-lg-6 col-md-12 mb-4 mb-lg-0 order-lg-last">
+                  <motion.img
+                    className={`img-fluid3 rounded ${styles.imgFluid12}`}
+                    src={Team}
+                    alt="Growth"
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1 }}
+                  />
+                </div>
+                <div className="col-lg-6 col-md-12">
+                  <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1 }}
+                  >
+                    <h2 className="fw-bolder">ENG / AMAL AHMED</h2>
+                    <p className={`lead fw-normal mb-0 ${styles.leadText}`}>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                      est, ut esse a labore aliquam beatae expedita. Blanditiis
+                      impedit numquam libero molestiae et fugit cupiditate, quibusdam
+                      expedita, maiores eaque quisquam.
+                    </p>
+                  </motion.div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+            <section className={`py-4 mb-3 bg-light ${styles.section}`}>
+              <div className={styles.container}>
+                <div className={`text-center ${styles.textCenter}`}>
+                  <motion.h2
+                    className="fw-bolder"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                  >
+                    Our team
+                  </motion.h2>
+                  <motion.p
+                    className={`lead fw-normal mb-4 ${styles.leadText}`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                  >
+                    Dedicated to quality and your success
+                  </motion.p>
+                </div>
+                <div className="row row-cols-1 row-cols-md-2 row-cols-xl-4 justify-content-center">
+                  {[
+                    { name: 'Mazen Saeed', role: 'Backend developer', img: Person2 },
+                    { name: 'Kareem Saeed', role: 'Frontend developer', img: Person2 },
+                    { name: 'Mohamed Ahmed', role: 'Backend developer', img: Person3 },
+                    { name: 'Youssef Ramy', role: 'UI/UX designer', img: Person4 },
+                  ].map((member, index) => (
+                    <motion.div
+                      key={index}
+                      className="col mb-4"
+                      initial={{ opacity: 0, y: 50 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 1, delay: index * 0.2 }}
+                    >
+                      <div className="text-center">
+                        <img
+                          className={`${styles.imgFluid2} rounded-circle mb-3 px-4 ${styles.imgCircle}`}
+                          src={member.img}
+                          alt={member.name}
+                        />
+                        <h5 className="fw-bolder">{member.name}</h5>
+                        <div className={`fst-italic ${styles.leadText}`}>{member.role}</div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </section>
+            <section className={`py-4 bg-dark text-white ${styles.section}`}>
+                    <div className={styles.container}>
+                        <div className="row align-items-center">
+                            <div className="col-lg-8 col-md-12 mb-4 mb-lg-0 d-sm-block">
+                                <motion.video
+                                    className={`img-fluid rounded ${styles.video}`}
+                                    src="https://www.w3schools.com/html/mov_bbb.mp4"
+                                    controls
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ duration: 1 }}
+                                >
+                                    Your browser does not support the video tag.
+                                </motion.video>
+                            </div>
+                            <div className="col-lg-4 col-md-12">
+                                <motion.div
+                                    initial={{ opacity: 0, x: 50 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 1 }}
+                                >
+                                    <h2 className="fw-bolder text-white">Watch Our Story</h2>
+                                    <p className={`lead fw-normal mb-0 ${styles.leadText}`}>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                                        est, ut esse a labore aliquam beatae expedita. Blanditiis
+                                        impedit numquam libero molestiae et fugit cupiditate, quibusdam
+                                        expedita, maiores eaque quisquam.
+                                    </p>
+                                </motion.div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        </main>
+        <Footer />
+        </>
+    );
+};
+
+export default Test;

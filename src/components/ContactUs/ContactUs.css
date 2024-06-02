@@ -115,6 +115,7 @@ input, textarea {
     .contact {
         font-size: 8vw;
     }
+    
     .talk {
         display: flex;
         flex-direction: column-reverse;
@@ -177,7 +178,8 @@ input, textarea {
       }
       .form {
           /* transform: translate(-68%, -1%); */
-          transform: translate(-70%, 1%) !important;
+          /* transform: translate(-70%, 1%) !important; */
+          transform: translate(-66%, 1%) !important;
       }
       textarea {
         width: calc(90% - 80px) !important; 
@@ -493,5 +495,17 @@ input, textarea {
 @media (min-width: 1024px) and (max-width: 1250px) {
   .v {
     transform: translate(-45%) !important;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 420px) {
+  .form {
+    transform: translate(-70%) !important;
+  }
+  .x {
+    transform: translate(-15%) !important;
+  }
+  .dd {
+    transform: translate(-60%, -70%) !important;
   }
 }

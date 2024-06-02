@@ -4,3 +4,9 @@
 .nav-link:hover {
   color: #BCBCBC !important; 
 }
+.er {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+}

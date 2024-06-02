@@ -3,10 +3,12 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom"; 
 import { userContext } from "../../context/UserContext";
 import "./Header.css";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const { token } = useContext(userContext);
   const [isOpen, setIsOpen] = useState(false);
+  const profilePage = useSelector(state => state.user.profilePage);
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -44,18 +46,26 @@ const Header = () => {
               <Link to="/contact" className="nav-link text-white">
                 Contact us
               </Link>
-              <Link to="/about" className="nav-link text-white">
+              <Link to="/test" className="nav-link text-white">
                 About
+              </Link>
+              
+              <Link to="/register" className="nav-link text-white">
+                Sign Up
               </Link>
               {token ? (
                 <Link to="/profile" className="nav-link text-white">
-                  profile
+                  <img src={profilePage} className="er" alt="" />
                 </Link>
               ) : (
                 <Link to="/login" className="nav-link text-white">
                   Log In
                 </Link>
               )}
+              <Link to="/admin" className="nav-link text-white">
+                Dashboard
+              </Link>
+            
             </Nav>
           </Navbar.Collapse>
         </Container>

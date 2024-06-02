@@ -19,6 +19,8 @@ import {
   signInStart,
   signInSuccess,
   signInFailure,
+  updateProfilePage,
+  updateFullName,
 } from "../../redux/user/userSlice";
 // import { auth } from "../../config/firebase";
 // import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
@@ -39,6 +41,7 @@ const Login = ({ match }) => {
   const dispatch = useDispatch();
   const loading = useSelector((state) => state.user.loading);
   const error = useSelector((state) => state.user.error);
+  
   useEffect(() => {
     // Check if there's a token in local storage
     const storedToken = localStorage.getItem("token");
@@ -79,11 +82,13 @@ const Login = ({ match }) => {
         setFirstNamee(data.firstName);
         setLastNamee(data.lastName);
         setImage(data.picture);
+        dispatch(updateFullName(data.firstName + ' ' + data.lastName));
+        dispatch(updateProfilePage(data.picture));
         dispatch(signInSuccess(data));
         localStorage.setItem("token", data.userToken);
 
         setTimeout(() => {
-          navigate("/profile");
+          navigate("/");
         }, 1000);
         toast.success("Login successful", {
           autoClose: true,
@@ -195,13 +200,13 @@ const Login = ({ match }) => {
   </Alert>
 )}
         </form>
-        <div className="frame-parent">
-        {/* {user ? (
+        {/* <div className="frame-parent">
+        {user ? (
           <Profile />
         ) : (
           // <GoogleButton onClick={handleSignIn} />
         <img className="frame-child" onClick={handleSignIn} alt=""  src={Frame1} />
-        )} */}
+        )}
           <img className="frame-child"  alt=""  src={Frame1} />
           <img className="frame-child" alt="" src={Frame2} />
         </div>
@@ -210,7 +215,7 @@ const Login = ({ match }) => {
         <img className="vector-icon" alt="" src={Vector3} />
         <div className="or-wrapper">
           <div className="or">OR</div>
-        </div>
+        </div> */}
         <div className="join-us-by">
           join us by login to see our features and our designs
         </div>

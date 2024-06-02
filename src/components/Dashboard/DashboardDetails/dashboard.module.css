@@ -1,0 +1,154 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu {
+  flex: 1;
+  background-color: #283D4F;
+  padding: 20px;
+  min-height: 100vh;
+  display: grid;
+}
+
+.content {
+  flex: 5;
+  padding: 20px;
+  background-color: #DFEAF2;
+}
+
+.home {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(180px, auto);
+  grid-auto-flow: dense;
+  gap: 20px;
+}
+
+.box {
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  background-color: #fff;
+}
+
+.box1 {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.box2, .box3, .box5, .box6, .box8, .box9 {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.box4 {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.box7 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px;
+  width: 100%;
+  gap: 20px;
+}
+
+.projectCard h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.projectCard p {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.projectTypes {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.projectTypes div {
+  text-align: center;
+}
+
+.all {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+}
+
+.all1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+
+.projects {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.projects1 {
+  text-align: center;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1200px) {
+  .home {
+      grid-template-columns: repeat(3, 1fr);
+  }
+
+  .box7 {
+      grid-column: span 3;
+  }
+}
+
+@media (max-width: 992px) {
+  .home {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .box1, .box4, .box7 {
+      grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+      grid-template-columns: repeat(1, 1fr);
+  }
+  .menu {
+    height: 400px;
+    position: relative;
+  }
+  .menu {
+    min-height: 0;
+  }
+
+  .box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9 {
+      grid-column: span 1;
+  }
+}

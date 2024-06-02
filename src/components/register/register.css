@@ -255,11 +255,28 @@ input {
   top: 0px;
   max-width: 100%;
 }
+@media (max-width: 570px) {
+  .already1 {
+    
+    position: relative;
+    left: -280px !important;
+    top: 557px !important;
+    text-wrap: nowrap;
+  }
+}
 
 /* For smaller screens */
 @media (max-width: 768px) {
   .arcreality1 {
     display: none;
+  }
+  .already1 {
+    
+    position: relative;
+    /* left: -280px !important; */
+    left: -236px !important;
+    top: 657px !important;
+    text-wrap: nowrap;
   }
   .cerate-new-account {
     position: relative;
@@ -1042,4 +1059,47 @@ input {
     left: 95px;
     top: 504px;
   }
+}
+.already1 {
+  position: relative;
+  top: 715px;
+  left: 632px;
+  color: #283D4F;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .su {
+    transform: translate(-5%,  50%);
+  }
+  .email-wrapper {
+    width: 570px;
+  }
+  .register-inner {
+    width: 570px;
+  }
+  .frame-div {
+    width: 570px;
+  }
+  .first-name-wrapper {
+    width: 250px;
+  }
+  .last-name-wrapper {
+    width: 250px;
+    position: relative;
+    left: 350px;
+    top: 250px;
+  }
+  .wrap2 {
+    position: relative;
+    left: 30px !important;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1250px) {
+  .we {
+    transform: translate(-1%) !important;
+  }
+  .wrap {
+    width: 250px;
+    height: 70px;
+  }
+  
 }
