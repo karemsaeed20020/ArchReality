@@ -25,11 +25,8 @@ import ForgetPassword from "./components/ForgetPassword/ForgetPassword";
 import ResetPassword from "./components/ResetPassword/ResetPassword";
 import QRCode from "./pages/QRCode/QRCode";
 import Test2 from "./components/Test2/Test2";
-import Details from "./components/details/Details";
 import Admin from "./components/Dashboard/Admin/Admin";
 import Dashboard from "./components/Dashboard/DashboardDetails/Dashboard";
-import Setting from "./components/Dashboard/Setting/Setting";
-import Account from "./components/Dashboard/Accounts/Account";
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -77,9 +74,6 @@ function App() {
           <Route path="/qr-code" element={<QRCode />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/setting" element={<Setting />} />
-          <Route path="/account" element={<Account />} />
-          {/* <Route path="/details" element={<Details />} /> */}
            {/* <Route path="/test2" element={<Test2 />} />  */}
         </Routes>
       )}

@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './dashboard.module.css';
 import Sidebar from '../Sidebar/Sidebar';
 import Navbar from '../Navbar/Navbar';
-import Setting from '../Setting/Setting';
 import TopBox from '../topBox/TopBox';
 import BarChartBox from '../barChartBox/BarChartBox';
 import { barChartBoxRevenue, barChartBoxVisit, chartBoxProduct, chartBoxRevenue, chartBoxUser } from '../../../data/data';
