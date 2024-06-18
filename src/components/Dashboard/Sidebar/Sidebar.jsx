@@ -122,7 +122,8 @@ import {
     FaHome,
     FaChevronDown,
     FaChair,
-    FaTree
+    FaTree,
+    FaHouzz
 } from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
 
@@ -158,6 +159,12 @@ const Sidebar = () => {
                     path: "/services/exterior",
                     name: "Exterior",
                     icon: <FaTree />
+                }
+                ,
+                {
+                    path: "/services/ARmodel",
+                    name: "ARmodel",
+                    icon: <FaHouzz  />
                 }
             ]
         },

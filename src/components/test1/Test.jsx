@@ -745,7 +745,7 @@ const Test = () => {
                     <h1 className="fw-bolder mb-3 text-black mt-5">
                       Our mission is to make Archreality websites easier for everyone.
                     </h1>
-                    <p className={`lead fw-normal mb-4 ${styles.leadText}`}>
+                    <p className={`lead fw-normal mb-4 text-white ${styles.leadText}`}>
                       Real estate encompasses the land, plus any permanent man-made additions, such as houses and other buildings. Any additions or changes to the land that affects the property's value are called an improvement.
                     </p>
                     <a className={`btn btn-lg ${styles.btnPrimary}`} href="#scroll-target">
@@ -778,10 +778,7 @@ const Test = () => {
                   >
                     <h2 className="fw-bolder">Our Company</h2>
                     <p className={`lead fw-normal text-black mb-0 ${styles.leadText}`}>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-                      est, ut esse a labore aliquam beatae expedita. Blanditiis
-                      impedit numquam libero molestiae et fugit cupiditate, quibusdam
-                      expedita, maiores eaque quisquam.
+                    Real estate agents usually specialize in either commercial or residential real estate. In either case, their duties largely depend on whether they work for the buyer or the seller. Agents who work for the seller, known as listing agents, advise clients on how to price the property and prepare it for sale. They commonly supply tips on last-minute improvements to boost prices or encourage faster offers. Seller agents market the property through listing services, their network of professionals and others, and advertisements.
                     </p>
                   </motion.div>
                 </div>
@@ -810,10 +807,7 @@ const Test = () => {
                   >
                     <h2 className="fw-bolder">ENG / AMAL AHMED</h2>
                     <p className={`lead fw-normal mb-0 ${styles.leadText}`}>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-                      est, ut esse a labore aliquam beatae expedita. Blanditiis
-                      impedit numquam libero molestiae et fugit cupiditate, quibusdam
-                      expedita, maiores eaque quisquam.
+                    Amal Ahmed is a seasoned professional with extensive experience in the real estate industry. Her expertise lies in [mention Amal's area of expertise here, e.g., property management, residential sales, commercial leasing]. Amal is passionate about helping clients achieve their real estate goals and is known for her dedication, integrity, and market knowledge.
                     </p>
                   </motion.div>
                 </div>
@@ -845,8 +839,8 @@ const Test = () => {
                   {[
                     { name: 'Mazen Saeed', role: 'Backend developer', img: Person2 },
                     { name: 'Kareem Saeed', role: 'Frontend developer', img: Person2 },
-                    { name: 'Mohamed Ahmed', role: 'Backend developer', img: Person3 },
-                    { name: 'Youssef Ramy', role: 'UI/UX designer', img: Person4 },
+                    { name: 'Mohamed Ahmed', role: 'Backend developer', img: Person2 },
+                    { name: 'Youssef Ramy', role: 'UI/UX designer', img: Person2 },
                   ].map((member, index) => (
                     <motion.div
                       key={index}
@@ -875,7 +869,7 @@ const Test = () => {
                             <div className="col-lg-8 col-md-12 mb-4 mb-lg-0 d-sm-block">
                                 <motion.video
                                     className={`img-fluid rounded ${styles.video}`}
-                                    src="https://www.w3schools.com/html/mov_bbb.mp4"
+                                    src="https://videos.pexels.com/video-files/3773486/3773486-sd_640_360_30fps.mp4"
                                     controls
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}

@@ -27,9 +27,18 @@ import QRCode from "./pages/QRCode/QRCode";
 import Test2 from "./components/Test2/Test2";
 import Admin from "./components/Dashboard/Admin/Admin";
 import Dashboard from "./components/Dashboard/DashboardDetails/Dashboard";
+import Test3 from "./components/test3/Test3";
+import Test4 from "./pages/Test4/Test4";
+import SingleProduct from "./components/SingleProduct/SingleProduct";
+import ServicesExterior from "./components/Dashboard/Services/Exterior/Exterior";
+import Accounts from "./components/Dashboard/Accounts/Accounts";
+import Setting from "./components/Dashboard/Setting/Setting";
+
+
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
+  
   
   useEffect(() => {
     // Simulate data fetching or other loading tasks
@@ -56,7 +65,10 @@ function App() {
       ) : (
         <Routes>
           {/* <Route path="/" element={<Home />} /> */}
-          <Route path="/" element={<Test2 />} />
+          {/* <Route path="/" element={<Test2 />} /> */}  
+          <Route path="/" element={<Test3 />} />
+          <Route path="/test4" element={<Test4 />} />
+          {/* <Route path="/test5" element={<Home />} /> */}
           {/* <Route path="/login" element={<Login />} /> */}
           <Route path="/register" element={<Register />} />
           <Route path="/contact" element={<ContactUs />} />
@@ -73,7 +85,15 @@ function App() {
           <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/qr-code" element={<QRCode />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/account" element={<Accounts />} />
+          <Route path="/setting" element={<Setting />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/test3" element={<Test3 />} />
+          <Route path="/services/exterior" element={<ServicesExterior isExterior={true} />} />
+          <Route path="/services/interior" element={<ServicesExterior isExterior={false} />} />
+          <Route path="/services/ARmodel" element={<ServicesExterior isExterior={false} ARmodel={true}/>} />
+          <Route path="/ARmodel/:id" element={<SingleProduct />} />
+
            {/* <Route path="/test2" element={<Test2 />} />  */}
         </Routes>
       )}

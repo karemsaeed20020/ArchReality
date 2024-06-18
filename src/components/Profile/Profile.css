@@ -275,6 +275,14 @@
         display: flex;
         flex-direction: column;
     }
+    .tty {
+      display: none !important;
+    }
+   
+    .oi {
+      position: relative !important;
+      left: -356px !important;
+    }
     .ellipse-1135 {
         display: none;
     }

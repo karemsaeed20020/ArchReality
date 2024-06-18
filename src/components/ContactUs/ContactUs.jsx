@@ -6,6 +6,8 @@ import Frame1 from "../../assets/Frame 3879.png";
 import Frame2 from "../../assets/noun_Phone_3612570 1.png";
 import Frame3 from "../../assets/noun_Email_247564 1.png";
 import { motion } from "framer-motion";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContactUs = () => {
   const firstNameRef = useRef(null);
@@ -13,25 +15,39 @@ const ContactUs = () => {
   const emailRef = useRef(null);
   const phoneNumberRef = useRef(null);
   const messageRef = useRef(null);
-  
+
   useEffect(() => {
     firstNameRef.current.focus();
   }, []);
+
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [message, setMessage] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Simple validation
+    if (!firstName || !lastName || !email || !phoneNumber || !message) {
+      toast.error('Please fill in all the required fields!');
+      return;
+    }
+
     console.log("Form submitted:", { firstName, lastName, email, phoneNumber, message });
-    
+
+    // Display success toast notification
+    toast.success('Message sent successfully!');
+
+    // Clear the form fields
     setFirstName("");
     setLastName("");
     setEmail("");
     setPhoneNumber("");
     setMessage("");
   };
+
   return (
     <>
       <Header />
@@ -41,7 +57,7 @@ const ContactUs = () => {
         transition={{ duration: 0.5 }}
         className="absolute object-cover object-center inset-0 size-full w-full pb-12 px-14 max-md:max-w-full max-md:px-5"
       >
-        <img src={Contact} alt="" />
+        <img src={Contact} className="wqqw" alt="" />
         <h1 className="contact text-white ">Contact us</h1>
       </motion.div>
       <div className="talk d-flex align-items-center lh">
@@ -79,15 +95,10 @@ const ContactUs = () => {
             </div>
           </div>
         </div>
-        <motion.div
-          className="form v align-items-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.5 }}
-        >
+        
           <form className='x' onSubmit={handleSubmit}>
-            <div class="row mb-3 p-1">
-              <div class="col">
+            <div className="row mb-3 p-1">
+              <div className="col">
                 <input
                   ref={firstNameRef}
                   style={{ backgroundColor: "#F9F9F9" }}
@@ -100,7 +111,7 @@ const ContactUs = () => {
                   onChange={(e) => setFirstName(e.target.value)}
                 />
               </div>
-              <div class="col">
+              <div className="col">
                 <input
                   ref={lastNameRef}
                   style={{ backgroundColor: "#F9F9F9" }}
@@ -114,8 +125,8 @@ const ContactUs = () => {
                 />
               </div>
             </div>
-            <div class="row g-1 mb-3">
-              <div class="col">
+            <div className="row g-1 mb-3">
+              <div className="col">
                 <input
                   ref={emailRef}
                   style={{ backgroundColor: "#F9F9F9" }}
@@ -143,7 +154,6 @@ const ContactUs = () => {
               />
             </div>
             <div className="col">
-              {/* <textarea name="" id="" cols="30" rows="10" style={{width: "465px", height: "140px", backgroundColor: "#F9F9F9"}} placeholder='Your message...'></textarea> */}
               <textarea
                 ref={messageRef}
                 className="form-control lj"
@@ -174,8 +184,20 @@ const ContactUs = () => {
               Send Message
             </motion.button>
           </form>
-        </motion.div>
+        
       </div>
+      <ToastContainer 
+        position="bottom-right" 
+        autoClose={5000} 
+        hideProgressBar={false} 
+        newestOnTop={false} 
+        closeOnClick 
+        rtl={false} 
+        pauseOnFocusLoss 
+        draggable 
+        pauseOnHover 
+        toastStyle={{ whiteSpace: "nowrap" }} 
+      />
     </>
   );
 };

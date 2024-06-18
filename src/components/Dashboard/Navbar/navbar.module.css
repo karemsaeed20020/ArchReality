@@ -12,4 +12,7 @@ nav {
     .address {
         display: none;
     }
+    nav {
+        background-color: #283D4F !important;
+    }
 }

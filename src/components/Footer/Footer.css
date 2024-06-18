@@ -9,7 +9,7 @@ section {
 }
 img {
   width: 43px;
-  height: 64px;
+  /* height: 64px; */
 }
 .footer {
   display: grid;

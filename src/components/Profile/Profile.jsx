@@ -172,6 +172,7 @@ const Profile = () => {
             </p>
 
             <svg
+            className='tty'
               version="1.0"
               xmlns="http://www.w3.org/2000/svg"
               width="300.000000pt"
@@ -464,7 +465,7 @@ const Profile = () => {
                         top: "-20px",
                         left: "-120px",
                       }}
-                      className="oa last1 last5 mb-3"
+                      className="oa oi last1 last5 mb-3"
                     >
                       Confirm Password
                     </Form.Label>

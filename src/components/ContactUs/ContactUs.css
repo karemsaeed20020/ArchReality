@@ -509,3 +509,41 @@ input, textarea {
     transform: translate(-60%, -70%) !important;
   }
 }
+.wqqw {
+  height: 50vh;
+}
+@media (max-width: 400px) {
+  textarea {
+    transform: translate(-15%);
+  }
+}
+.x {
+  position: relative;
+  left: 330px;
+  top: 48px;
+}
+@media (max-width: 575px) {
+  .x {
+    position: relative !important;
+  left: 40px !important;
+  }
+  .e {
+    position: relative !important;
+    left: 5px !important;
+  }
+}
+@media (min-width: 576px) and (max-width: 970px) {
+  .x {
+    position: relative !important;
+  left: 50px !important;
+  top: 20px !important;
+  }
+  .e {
+    position: relative !important;
+    left: 0 !important;
+  }
+  .lines {
+    position: relative !important;
+    left: 50px;
+  }
+}

@@ -69,7 +69,23 @@ import Image72 from '../assets/western-interior-design-styles-sitting-room.webp'
 import Image73 from '../assets/zen-interior-design-styles-sitting-room.webp'
 import Image74 from '../assets/art-deco-interior-design-styles-bedroom.webp'
 import Image75 from '../assets/urban-modern-interior-design-styles-sitting-room.webp'
-import Image76 from '../assets/Interior-Living_Pic.png'
+import Image76 from '../assets/Interior-Living_Pic.png';
+import Image77 from '../assets/Interior_Bathroom_Pic.png';
+import Image78 from '../assets/Interior_BedRoom_Pic.png';
+import Image79 from '../assets/Interior_Garage_Pic.png';
+import Image80 from '../assets/Interior_Pic.png';
+import Image81 from '../assets/Interior_Living_Pic.png';
+import Image82 from '../assets/Master_Pic.png';
+import Image83 from '../assets/Master(1)_Pic.png';
+import Image84 from '../assets/Master_Pic (1).png';
+import Image85 from '../assets/Walk-Through_Pic.png';
+import Image86 from '../assets/Back-Yard_Pic.png';
+import Image87 from '../assets/Up-Back_Pic.png';
+import Image88 from '../assets/Master(2)_Pic.png';
+import Image89 from '../assets/Master_Pic.png';
+import Image90 from '../assets/Master(1)_Pic.png';
+import Image91 from '../assets/Master_Pic(1).png';
+
 
 export const details = [
     {
@@ -287,31 +303,31 @@ export const exterior = [
   },
   {
     id: 4,
-    image: Image33,
+    image: Image85,
     title: "Hips, Gables, and Towers, Oh My",
     desc: "Breaking up the roofline of a home can really help add interest and style. To further emphasize the differences in the exterior, a variety of siding styles are also used including panels, trim, and shingles to get a look that’s traditional, yet unique at the same time"
   },
   {
     id: 5,
-    image: Image34,
+    image: Image86,
     title: "Town Houses with Personality",
     desc: "Breaking up the roofline of a home can really help add interest and style. To further emphasize the differences in the exterior, a variety of siding styles are also used including panels, trim, and shingles to get a look that’s traditional, yet unique at the same time"
   },
   {
     id: 6,
-    image: Image35,
+    image: Image85,
     title: "Eye-Catching Detail",
     desc: "The use of cream colored trim on this Cypress-colored home creates a softer appeal that goes well with its surroundings. To balance out the fieldstone along the bottom of the exterior, detailed trim is used just beneath the gables, creating an exterior home design that’s simple, yet full of character and detail all at once."
   },
   {
     id: 7,
-    image: Image36,
+    image: Image87,
     title: "A Panel of Blues",
     desc: "You don’t have to choose between siding styles if more than one type is calling to you. This home makes great use of three separate siding types, all in the same gorgeous shade of light blue. Horizontal lap siding covers the majority of the building, while architectural panels frame out the windows, and a wide board-and-batten helps separate the different planes of the façade, adding an additional level of detail."
   },
   {
     id: 8,
-    image: Image37,
+    image: Image88,
     title: "Old Fashioned Charm",
     desc: "While horizontal lap siding seems to be the default look these days, there’s a lot of charm and interest in breaking the mold and moving toward a more old fashioned look like this board and batten siding. The evenly spaced boards give height this this home, drawing the eye upward and putting the focus on the center."
   },
@@ -467,21 +483,21 @@ export const interior = [
   },
   {
     id: 5 ,
-    image: Image62,
-    title: "Modern",
-    desc: "The modern interior design style is recognisable by the use of muted colour schemes or bold colour contrasts, natural surfaces and materials including wood, glass and steel. It has a simple, sleek and minimal look featuring essential furniture only. This style features open floor plans, geometric shapes and asymmetric design."
+    image: Image79,
+    title: "From Clutter to Class: Transform Your Garage into a Functional Space",
+    desc: "Uncover the hidden potential of your garage! Explore functional design ideas to turn it from a storage space into a well-organized haven for hobbies, workouts, or even a creative studio."
   },
   {
     id: 6 ,
-    image: Image63,
+    image: Image80,
     title: "Traditional",
     desc: "The traditional interior design style is also known as the old-school European style. It’s a classic style that uses plain colour schemes and traditional handcrafted wooden furniture pieces. Wood panelling is also a common feature with antique pieces used for decoration."
   },
   {
     id: 7 ,
-    image: Image64,
-    title: "Residential design",
-    desc: "The interior design of private homes and residences can be undertaken professionally or by homeowners. When investing in a new kitchen, for example, some homeowners prefer to use the services of an interior designer to ensure the space available is used most practically and functionally. An interior designer can help to support the homeowner with their design choices and manage the project from start to finish."
+    image: Image81,
+    title: "Tranquil Escape: Calming Bedroom Design Ideas",
+    desc: "Discover a haven of serenity with these calming bedroom design ideas. Unwind in a space that promotes relaxation and rejuvenation."
   },
   {
     id: 8 ,
@@ -773,3 +789,74 @@ export const singlePostData = {
   description:
     "Future alike hill pull picture swim magic chain seed engineer nest outer raise bound easy poetry gain loud weigh me recognize farmer bare danger. actually put square leg vessels earth engine matter key cup indeed body film century shut place environment were stage vertical roof bottom lady function breeze darkness beside tin view local breathe carbon swam declared magnet escape has from pile apart route coffee storm someone hold space use ahead sheep jungle closely natural attached part top grain your grade trade corn salmon trouble new bend most teacher range anybody every seat fifteen eventually",
 };
+
+
+
+export const interior1 = [
+  {
+    id: "1",
+    image: Image76,
+    title: "Cozy Comfort: Creating a Warm and Inviting Living Room",
+    desc: "Craft a living room that feels like a warm hug with these cozy and inviting design ideas."
+  },
+  {
+    id: "2",
+    image: Image77,
+    title: "Natural Elements: Bringing the Outdoors In with Bathroom Design",
+    desc: "Create a connection with nature by incorporating natural elements like stone, wood, and plants into your bathroom design."
+  },
+  {
+    id: "3",
+    image: Image78,
+    title: "Modern Minimalism: Sleek and Stylish Bedroom Design",
+    desc: "Embrace the clean lines and uncluttered aesthetic of modern minimalism in your bedroom."
+  },
+  
+]
+export const exterior1 = [
+  {
+    id: "1",
+    image: Image83,
+    title: "Cozy Comfort: Creating a Warm and Inviting Living Room",
+    desc: "Craft a living room that feels like a warm hug with these cozy and inviting design ideas."
+  },
+  {
+    id: "2",
+    image: Image82,
+    title: "Finding Your Perfect Fit: Exploring Different Architectural Styles",
+    desc: "From modern minimalism to classic traditional, delve into the world of architectural styles for your dream home. Discover the unique characteristics of each style and how they translate to the exterior design."
+  },
+  {
+    id: "3",
+    image: Image83,
+    title: "Nature's Embrace: Integrating Landscaping for a Unified Exterior",
+    desc: "Create a seamless connection between your home and the surrounding environment with thoughtful landscaping. Discover ways to use plants, trees, and hardscaping elements to enhance curb appeal, provide privacy, and define outdoor living spaces."
+  },
+  {
+    id: "4",
+    image: Image84,
+    title: "The Right Stuff: Selecting Durable and Stylish Materials for Your Exterior",
+    desc: " Discover the vast array of materials available for your home's exterior, from timeless brick and stone to modern wood and metal. Explore the pros and cons of each material in terms of durability, maintenance, and overall aesthetic impact"
+  },
+  
+]
+export const arModel = [
+  {
+    id: 1, 
+      image: Image89,
+      title: 'Royal hotel',
+      desc: "Discover a world of timeless elegance and refined luxury at The Royal Hotel, where every detail is crafted to provide an unforgettable ......"
+  },
+  {
+    id: 2, 
+      image: Image90,
+      title: 'Harmony Haven',
+      desc: "Nestled at the intersection of modern convenience and natural serenity, Harmony Haven stands as the epitome of a compound city, seamlessly ......"
+  },
+  {
+    id: 3, 
+      image: Image91,
+      title: 'Luxurious Interior Villa',
+      desc: "ndulge in unparalleled luxury in this exquisite interior villa, where opulence meets sophistication to create a residence that blends pride .........."
+  },
+]

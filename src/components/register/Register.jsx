@@ -53,7 +53,7 @@ const Register = () => {
     try {
       const response = await axios.post(apiEndpoint, data);
       console.log("SignUp successful:", response.data);
-      navigation("/");
+      navigation("/login");
       toast.success("Registration successful!");
     } catch (error) {
       setLoading(false);
@@ -225,7 +225,7 @@ const Register = () => {
                   )}
                 </motion.button>
               </Link>
-              <span className="already1">Have an account ? <Link to={'/login'}>Login</Link></span>
+              {/* <span className="already1">Have an account ? <Link to={'/login'}>Login</Link></span> */}
             </div>
           </form>
         </div>

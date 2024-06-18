@@ -263,8 +263,46 @@ input {
     top: 557px !important;
     text-wrap: nowrap;
   }
+  .sign-up-wrapper1 {
+    transform: translate(11%, -173%);
+  }
+  .wrap1 {
+    position: relative;
+    width: 40%;
+    left: 177px;
+    top: 330px !important;
+  }
+  .su {
+    position: relative;
+    top: 600px !important;
+  }
 }
 
+@media (min-width: 550px) and (max-width: 570px) {
+  .we {
+    position: relative;
+    left: 10px !important;
+  }
+}
+@media (min-width: 570px) and (max-width: 577px) {
+  .we {
+    position: relative;
+    left: 10px !important;
+  }
+  .sign-up-wrapper1 {
+    transform: translate(11%, -173%);
+  }
+  .wrap1 {
+    position: relative;
+    width: 40%;
+    left: 270px !important;
+    top: 330px !important;
+  }
+  .su {
+    position: relative;
+    top: 600px !important;
+  }
+}
 /* For smaller screens */
 @media (max-width: 768px) {
   .arcreality1 {
@@ -1092,6 +1130,17 @@ input {
     position: relative;
     left: 30px !important;
   }
+  .wrap1 {
+    /* position: relative !important;
+  left: 1100px !important;
+  top: 219px !important; */
+  transform: translate(300%, -27px) !important;
+  }
+  .su {
+    position: relative;
+  top: 500px;
+  left: 900px;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1250px) {
   .we {
@@ -1103,3 +1152,71 @@ input {
   }
   
 }
+@media (min-width: 700px) and (max-width: 725px) {
+  
+  .wrap1 {
+    position: relative;
+    left: 330px;
+  }
+  
+}
+@media (min-width: 725px) and (max-width: 750px) {
+  
+  .wrap1 {
+    position: relative;
+    left: 340px;
+  }
+  
+}
+@media (min-width: 658px) and (max-width: 700px) {
+  
+  .wrap1 {
+    position: relative;
+    left: 320px;
+  }
+  
+}
+@media (min-width: 750px) and (max-width: 900px) {
+  
+  .wrap3 {
+    position: relative;
+    left: 25px !important;
+  }
+  .wrap1 {
+    position: relative;
+    left: 350px !important;
+    width: 200px
+  }
+  
+@media (min-width: 770px) and (max-width: 901px) {
+  
+  .wrap1 {
+    position: relative !important;
+  left: 330px !important;
+  top: 250px !important;
+  width: 250px !important;
+  }
+  
+}
+
+}
+@media (min-width: 926px) and (max-width: 1024px) {
+  
+  .wrap1 {
+    position: relative !important;
+  left: 330px !important;
+  top: 250px !important;
+  /* width: 250px !important; */
+  height: 70px !important;
+  }
+  .wrap2 {
+    position: relative !important;
+  left: 35px !important;
+  }
+  .wrap3 {
+    position: relative;
+  left: 41px;
+  height: 50px;
+  }
+}
+
