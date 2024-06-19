@@ -5,6 +5,7 @@ import './navbar.module.css';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import styles from './navbar.module.css'
+import Image from '../../../assets/Ellipse 1132 (1).png';
 
 const Navbar = () => {
     
@@ -22,7 +23,7 @@ const Navbar = () => {
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ms-auto gap-3">
         <img src={b} style={{width: "50px", height: "50px"}} alt="" />
-        <Link to={'/setting'} style={{textDecoration: "none"}}><img src={profilePage1} style={{width: "50px", height :"50px", borderRadius: "50%"}} alt="" /></Link>
+        <Link to={'/setting'} style={{textDecoration: "none"}}><img src={Image} style={{width: "50px", height :"50px", borderRadius: "50%"}} alt="" /></Link>
         
         <div style={{display: "flex" ,flexDirection: "column"}}>
             <span style={{color: "#000", fontSize: "22px", fontWeight: "700"}}>Sara Ahmed</span>

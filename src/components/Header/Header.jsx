@@ -36,7 +36,7 @@ const Header = () => {
             id="responsive-navbar-nav"
             className={isOpen ? "show" : ""}
           >
-            <Nav className="links mx-auto me-5 fw-bold">
+            <Nav className="links mx-auto me-5 fw-bold" style={{textWrap: "nowrap"}}>
               <Link to="/" className="nav-link text-white">
                 Home
               </Link>

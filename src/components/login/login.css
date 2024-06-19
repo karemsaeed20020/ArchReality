@@ -32,7 +32,8 @@
 }
 .container-item {
   position: absolute;
-  top: 229px;
+  /* top: 229px; */
+  top: 150px;
   left: 774px;
   width: 555px;
   height: 758px;
@@ -40,7 +41,8 @@
 }
 .arcreality {
   position: absolute;
-  top: 94px;
+  /* top: 94px; */
+  top: 10px;
   left: 765px;
   font-size: 112px;
   letter-spacing: 0.17em;
@@ -208,7 +210,7 @@
   position: relative;
   background-color: #fff;
   width: 100%;
-  height: 1024px;
+  height: 850px;
   overflow: hidden;
   text-align: left;
   font-size: var(--font-size-xl);

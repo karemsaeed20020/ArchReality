@@ -37,10 +37,10 @@ const ForgetPassword = () => {
     return (
         <>
             {!emailSubmitted ? (
-                <div className="container-fluid  pt-5">
+                <div className="container-fluid">
                     <div className="row fa ">
                         <div className="col-lg-6 ">
-                            <img src={Test3} alt="Main IMG" className="img-fluid  d-none d-lg-block" />
+                            <img src={Test3} alt="Main IMG" className="img-fluid  d-none d-lg-block" style={{position: "relative", left: "-11px"}} />
                         </div>
                         <div className="za col-lg-6 col-sm-6 pt-5">
                             <h2 className="ma main-text pt-5 mt-5">Forgot <br /> Your Password</h2>

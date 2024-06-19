@@ -94,7 +94,7 @@ const ResetPassword = () => {
     };
 
     return (
-        <div className="containers pt-5">
+        <div className="containers">
             <div className="row">
                 <div className="fe col-lg-6 order-lg-2 order-1 pt-5">
                     <h2 className="main-text mb-5 pt-5 mt-5">Reset Your Password</h2>

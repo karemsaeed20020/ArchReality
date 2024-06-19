@@ -56,7 +56,7 @@
 }
 .img-fluid {
     height: 102vh !important;
-    transform: translate(-2%, -8%);
+    /* transform: translate(-2%, -8%); */
 }
 .btn {
     width: 220px;

@@ -112,7 +112,8 @@
 .appear {
     margin-top: 50px;
     background-color: #283D4F;
-    height: 105vh;
+    /* height: 105vh; */
+    height: 118vh;
 }
 .user2 {
     margin-top: 80px;
@@ -318,7 +319,8 @@
         padding-bottom: 15px;
     }
     .last1 {
-        transform: translate(140%, 50%);
+        /* transform: translate(140%, 50%); */
+        transform: translate(68%, 50%);
         padding-bottom: 15px;
     }
     .lastName {
@@ -610,4 +612,57 @@ left: -20px;
 }
 .vh {
   padding: 30px;
+}
+
+@media (min-width: 391px) and (max-width: 450px) {
+  .last {
+    transform: translate(60%, 10px) !important;
+  }
+  .last1 {
+    transform: translate(58%, 10px) !important;
+  }
+  .vh {
+    position: relative;
+  left: -63px;
+  }
+}
+@media (min-width: 350px) and (max-width: 391px) {
+  .last {
+    transform: translate(68%, 10px) !important;
+  }
+  .last1 {
+    transform: translate(68%, 10px) !important;
+  }
+  .vh {
+    position: relative;
+  left: -63px;
+  }
+  .xz {
+    position: relative !important;
+    left: 70px !important;
+  }
+  .zx {
+    position: relative !important;
+    left: 70px !important;
+  }
+}
+@media (min-width: 391px) and (max-width: 570px) {
+  .last {
+    transform: translate(58%, 10px) !important;
+  }
+  .last1 {
+    transform: translate(58%, 10px) !important;
+  }
+  .vh {
+    position: relative;
+  left: -63px;
+  }
+  .xz {
+    position: relative !important;
+    left: 10px !important;
+  }
+  .zx {
+    position: relative !important;
+    left: 10px !important;
+  }
 }
